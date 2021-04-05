@@ -5,7 +5,7 @@
   home.file.".zshrc".source = "${dotroot}/zshrc";
   home.file.".profile".source = "${dotroot}/profile";
 
-  xdg.configFile = {
+  xdg.configFile.zsh = {
     recursive = true;
     source = "${dotroot}/zsh";
   };
