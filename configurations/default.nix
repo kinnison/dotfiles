@@ -15,4 +15,6 @@ in
   home.sessionVariables = {
     RUSTUP_HOME = "${xdg.dataHome}/rustup";
   };
+
+  home.stateVersion = "20.09";
 }
