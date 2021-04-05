@@ -9,7 +9,7 @@ alias lla='la -l'
 
 # Look for colours...
 
-DCFILE=$XDG_CONFIG_DIR/ls/dircolors
+DCFILE=$XDG_CONFIG_HOME/ls/dircolors
 DCEXEC=$(which dircolors)
 
 if [ "x$DCEXEC" = "x" ]; then
