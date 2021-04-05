@@ -1,0 +1,20 @@
+# -*- sh -*-
+
+# Locate local packages and add env vars as needed
+
+add_path () {
+    local ELEM
+    ELEM="$1"
+    if ! (echo "$PATH" | grep -q "$ELEM"); then
+	PATH="$ELEM:$PATH"
+    fi
+}
+
+maybe_add_path () {
+    if test -d "$1"; then
+	add_path "$1";
+    fi
+}
+
+maybe_add_path "$CARGO_HOME/bin"
+

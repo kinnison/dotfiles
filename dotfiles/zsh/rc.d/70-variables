@@ -1,0 +1,10 @@
+# -*- sh -*-
+
+# Useful variables for our ZSH environment
+
+test "x$HOSTNAME" = "x" && HOSTNAME=$(hostname)
+export HOSTNAME
+
+test "x$VISUAL" = "x" && VISUAL=vim
+export VISUAL
+
