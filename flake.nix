@@ -30,7 +30,7 @@
         homeConfigurations = {
           test = make-home {
             modules = [
-              ./configurations/shared/zsh
+              ./configurations/shared/zsh.nix
             ];
           };
         };
