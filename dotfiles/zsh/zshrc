@@ -10,16 +10,13 @@ setopt no_auto_menu
 zstyle ':completion:*' list-suffixes true
 # Bash-style null glob result -> no error
 setopt null_glob
+# Comments in the shell prompt are permitted
+setopt interactivecomments
 
 # Emacs keybindings
 bindkey -e
 
-if [ -d ~/bin ]; then
-  PATH=~/bin:$PATH
-  export PATH
-fi
-
-for F in "$XDG_CONFIG_HOME/zsh/rc.d/"([a-zA-Z0-9-]##)(.); do
+for F in "$XDG_CONFIG_HOME"/zsh/rc.d/*; do
   source $F
 done
 

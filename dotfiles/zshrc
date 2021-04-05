@@ -1,18 +1,12 @@
 # ZSH configuration top level
 
-# Load top level items
-maybe_load () {
-    local filename
-    filename = "$1"
-    if [ -f "$filename" ]; then
-      source "$filename"
-    fi
-}
-
-maybe_load "$HOME/.profile"
-maybe_load "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+[ -f "$HOME/.profile" ] && source "$HOME/.profile"
+[ -f "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ] && source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
 
 if [[ -o interactive ]]; then
-  ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-  source "$ZDOTDIR/zshrc"
+  echo "Interactive shell, hurrah"
 fi
+
+ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+source "$ZDOTDIR/zshrc"
+

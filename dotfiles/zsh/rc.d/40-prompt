@@ -394,7 +394,7 @@ which svn >/dev/null 2>&1 || {
     _find_svn () { return 1; }
 }
 
-which git-name-rev >/dev/null 2>&1 || test -x /usr/lib/git-core/git-name-rev || {
+which git-upload-pack >/dev/null 2>&1 {
     _find_git () { return 1; }
 }
 
@@ -410,7 +410,7 @@ which dpkg-parsechangelog >/dev/null 2>&1 || {
 
 SUDO=$(which sudo)
 if test -x "$SUDO" >/dev/null 2>/dev/null; then
-    could_sudo () { sudo -n -l /bin/true >/dev/null 2>/dev/null; }
+    could_sudo () { sudo -n -l /usr/bin/env >/dev/null 2>/dev/null; }
 else
     # No sudo support
     could_sudo () { return 1; }
