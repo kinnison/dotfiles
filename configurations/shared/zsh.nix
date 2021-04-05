@@ -9,4 +9,9 @@
     recursive = true;
     source = "${dotroot}/zsh";
   };
+
+  xdg.configFile.ls = {
+    recursive = true;
+    source = "${dotdir}/ls";
+  };
 }

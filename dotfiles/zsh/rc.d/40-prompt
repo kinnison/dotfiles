@@ -394,7 +394,7 @@ which svn >/dev/null 2>&1 || {
     _find_svn () { return 1; }
 }
 
-which git-upload-pack >/dev/null 2>&1 {
+which git-upload-pack >/dev/null 2>&1 || {
     _find_git () { return 1; }
 }
 
