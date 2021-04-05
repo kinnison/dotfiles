@@ -12,6 +12,6 @@
 
   xdg.configFile.ls = {
     recursive = true;
-    source = "${dotdir}/ls";
+    source = "${dotroot}/ls";
   };
 }
