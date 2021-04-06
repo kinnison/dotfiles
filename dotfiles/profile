@@ -2,6 +2,7 @@
 
 # Home-manager setup
 [ -f "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ] && source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+[ -f "/etc/profiles/per-user/$USER/etc/profile.d/hm-session-vars.sh" ] && source "/etc/profiles/per-user/$USER/etc/profile.d/hm-session-vars.sh"
 
 # XDG variables
 export XDG_CONFIG_HOME="$HOME/.config"
