@@ -42,6 +42,7 @@ in
       PartOf = [ "graphical-session.target" ];
     };
     Service = {
+      ExecStartPre = "sleep 2";
       ExecStart = "${pkgs.polybar}/bin/polybar -r ${systemConfig.networking.hostName}";
       Restart = "on-failure";
     };
@@ -69,6 +70,16 @@ in
       use-system-font = false;
       use-theme-colors = false;
       visible-name = "Default";
+    };
+    settings."org/mate/desktop/background" = {
+      show-desktop-icons = false;
+      primary-color = "rgb(0,0,0)";
+      secondary-color = "rgb(0,0,0)";
+      color-shading-type = "vertical-gradient";
+    };
+    settings."org/mate/desktop/peripherals/keyboard/kbd" = {
+      layouts = [ "gb" ];
+      options = [ "terminate\tterminate:ctrl_alt_bksp" "Compose key\tcompose:caps" ];
     };
   };
 }
