@@ -31,6 +31,7 @@
           test = make-home {
             modules = [
               ./configurations/shared/zsh.nix
+              ./configurations/shared/gui.nix
             ];
           };
         };
