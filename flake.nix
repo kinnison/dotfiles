@@ -15,6 +15,7 @@
         , homeDirectory ? "/home/${username}"
         , modules ? []
         }: systemConfig: {
+          nixpkgs.config.allowUnfree = true;
           nixpkgs.overlays = [
             (
               final: prev: {
