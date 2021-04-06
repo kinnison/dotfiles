@@ -16,5 +16,7 @@ in
     RUSTUP_HOME = "${xdg.dataHome}/rustup";
   };
 
+  services.gpg-agent.enableSshSupport = true;
+
   home.stateVersion = "20.09";
 }
