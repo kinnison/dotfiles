@@ -56,7 +56,7 @@ in
       windowmanager = "xmonad";
     };
     settings."org/mate/desktop/session" = {
-      required-components-list = lib.hm.gvariant.mkTuple [ "windowmanager" "filemanager" ];
+      required-components-list = [ "windowmanager" "filemanager" ];
     };
   };
 }
