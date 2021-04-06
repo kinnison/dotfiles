@@ -42,6 +42,7 @@
               ./configurations/shared/zsh.nix
               ./configurations/shared/gui.nix
               ./configurations/shared/git.nix
+              ./configurations/shared/vscode.nix
             ];
           };
         };
