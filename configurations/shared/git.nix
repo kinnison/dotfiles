@@ -21,8 +21,18 @@
       pull.ff = "only";
       push.default = "current";
 
+      format.signoff = true;
+
+      rebase.autosquash = true;
+
       url."ssh://git@github.com/".pushInsteadOf = "https://github.com/";
       url."ssh://git@gitlab.com/".pushInsteadOf = "https://gitlab.com/";
+      url."ssh://git@github.com/".pushInsteadOf = "git://github.com/";
+      url."ssh://git@gitlab.com/".pushInsteadOf = "git://gitlab.com/";
+
+      alias = {
+        st = "status";
+      };
     };
   };
 
