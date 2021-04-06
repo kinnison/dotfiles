@@ -14,7 +14,7 @@
         { username ? "dsilvers"
         , homeDirectory ? "/home/${username}"
         , modules ? []
-        }: {
+        }: systemConfig: {
           nixpkgs.overlays = [
             (
               final: prev: {
@@ -23,7 +23,14 @@
             )
           ];
 
-          imports = [ ./configurations ] ++ modules;
+          imports = [
+            (
+              { ... }: {
+                _module.args.systemConfig = systemConfig;
+              }
+            )
+            ./configurations
+          ] ++ modules;
         };
     in
       {

@@ -1,5 +1,5 @@
 # Configuration for running Daniel's preferred GUI system (mate with xmonad)
-{ config, pkgs, lib, dotroot, ... }:
+{ config, pkgs, lib, dotroot, systemConfig, ... }:
 let
   xdg = config.xdg;
 in
@@ -42,7 +42,7 @@ in
       PartOf = [ "graphical-session.target" ];
     };
     Service = {
-      ExecStart = "${pkgs.polybar}/bin/polybar -r ${config.networking.hostName}";
+      ExecStart = "${pkgs.polybar}/bin/polybar -r ${systemConfig.networking.hostName}";
       Restart = "on-failure";
     };
     Install = { WantedBy = [ "graphical-session.target" ]; };
