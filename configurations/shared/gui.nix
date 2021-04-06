@@ -6,23 +6,10 @@ in
 {
   # First set up the main dependencies
 
-  services.xserver.enable = true;
-  services.xserver.displaymanager.gdm.enable = true;
-  services.xserver.desktopManager.mate.enable = true;
-  #environment.mate.excludePacakges = [
-  #  pkgs.mate.pluma
-  #];
-  services.xserver.displayManager.defaultSession = "mate";
-  services.xserver.windowManager.xmonad = {
-    enable = true;
-    enableContribAndExtras = true;
-  };
-
   home.packages = with pkgs; [
     firefox
     polybar
   ];
-  programs.nm-applet.enable = true;
 
   # Now configure the homedir to work properly
   # Sadly? xmonad isn't very XDGish
