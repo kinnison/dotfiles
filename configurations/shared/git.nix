@@ -34,4 +34,10 @@
     };
   };
 
+  # Since Git uses GnuPG to sign things...
+
+  programs.gpg = {
+    enable = true;
+  };
+
 }
