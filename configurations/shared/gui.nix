@@ -1,5 +1,5 @@
 # Configuration for running Daniel's preferred GUI system (mate with xmonad)
-{ config, pkgs, lib, dotroot, systemConfig, ... }:
+{ config, pkgs, lib, dotroot, systemConfig, homeDirectory, ... }:
 let
   xdg = config.xdg;
 in
@@ -32,6 +32,17 @@ in
     source = "${dotroot}/polybar";
   };
 
+  xdg.configFile."polybar/.launch" = {
+    executable = true;
+    text = ''
+      #!${pkgs.bash}/bin/bash
+
+      sleep 2
+
+      exec ${pkgs.polybar}/bin/polybar -r ${systemConfig.networking.hostName}
+    '';
+  };
+
   # But rather than setting it up as a desktop file for
   # the session, try using a user-thingy for graphical
   # sessions to see if that works.
@@ -42,8 +53,7 @@ in
       PartOf = [ "graphical-session.target" ];
     };
     Service = {
-      ExecStartPre = "sleep 2";
-      ExecStart = "${pkgs.polybar}/bin/polybar -r ${systemConfig.networking.hostName}";
+      ExecStart = "${homeDirectory}/.config/polybar/.launch";
       Restart = "on-failure";
     };
     Install = { WantedBy = [ "graphical-session.target" ]; };
