@@ -1,5 +1,5 @@
 # Configuration for running Daniel's preferred GUI system (mate with xmonad)
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, dotroot, ... }:
 let
   xdg = config.xdg;
 in
