@@ -27,6 +27,8 @@
             (
               { ... }: {
                 _module.args.systemConfig = systemConfig;
+                _module.args.username = username;
+                _module.args.homeDirectory = homeDirectory;
               }
             )
             ./configurations
