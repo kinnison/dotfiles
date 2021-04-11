@@ -1,9 +1,7 @@
 # User configuration valid on all systems
 { config, pkgs, lib, homeDirectory, ... }:
-let
-  xdg = config.xdg;
-in
-{
+let xdg = config.xdg;
+in {
   _module.args.dotroot = ./../dotfiles;
 
   home.activation = {
@@ -16,9 +14,7 @@ in
     '';
   };
 
-  home.sessionVariables = {
-    RUSTUP_HOME = "${xdg.dataHome}/rustup";
-  };
+  home.sessionVariables = { RUSTUP_HOME = "${xdg.dataHome}/rustup"; };
 
   services.gpg-agent = {
     enable = true;

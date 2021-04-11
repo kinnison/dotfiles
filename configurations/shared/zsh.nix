@@ -1,5 +1,4 @@
-{ pkgs, dotroot, ... }:
-{
+{ pkgs, dotroot, ... }: {
   home.packages = with pkgs; [ zsh ];
 
   home.file.".zshrc".source = "${dotroot}/zshrc";

@@ -13,9 +13,7 @@
     extraConfig = {
       branch.autoSetupRebase = "always";
       checkout.defaultRemote = "origin";
-      init = {
-        defaultBranch = "main";
-      };
+      init = { defaultBranch = "main"; };
 
       pull.rebase = true;
       pull.ff = "only";
@@ -25,19 +23,17 @@
 
       rebase.autosquash = true;
 
-      url."ssh://git@github.com/".pushInsteadOf = [ "git://github.com/" "https://github.com/" ];
-      url."ssh://git@gitlab.com/".pushInsteadOf = [ "git://gitlab.com/" "https://gitlab.com/" ];
+      url."ssh://git@github.com/".pushInsteadOf =
+        [ "git://github.com/" "https://github.com/" ];
+      url."ssh://git@gitlab.com/".pushInsteadOf =
+        [ "git://gitlab.com/" "https://gitlab.com/" ];
 
-      alias = {
-        st = "status";
-      };
+      alias = { st = "status"; };
     };
   };
 
   # Since Git uses GnuPG to sign things...
 
-  programs.gpg = {
-    enable = true;
-  };
+  programs.gpg = { enable = true; };
 
 }
