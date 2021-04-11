@@ -27,6 +27,11 @@
       "nix.enableLanguageServer" = true;
 
     };
+    keybindings = [{
+      key = "Enter";
+      command = "rust-analyzer.onEnter";
+      when = "editorTextFocus && !suggestWidgetVisible && editorLangId == rust";
+    }];
   };
   home.packages = with pkgs; [ rustup nixfmt ];
 }
