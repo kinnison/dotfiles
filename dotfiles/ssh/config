@@ -1,0 +1,12 @@
+Protocol 2,1
+ForwardAgent yes
+ServerAliveInterval 60
+Compression yes
+HashKnownHosts no
+LogLevel QUIET
+
+GSSAPIAuthentication no
+
+Host *
+	UseRoaming no
+

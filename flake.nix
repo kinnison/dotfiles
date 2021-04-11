@@ -43,6 +43,7 @@
               ./configurations/shared/zsh.nix
               ./configurations/shared/gui.nix
               ./configurations/shared/git.nix
+              ./configurations/shared/ssh.nix
               ./configurations/shared/vscode.nix
             ];
           };
