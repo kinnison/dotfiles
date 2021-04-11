@@ -66,6 +66,10 @@ in
     settings."org/mate/desktop/session/required-components" = {
       windowmanager = "xmonad";
     };
+    settings."org/mate/desktop/interface" = {
+      gtk-theme = "BlackMATE";
+      icon-theme = "mate";
+    };
     settings."org/mate/desktop/session" = {
       required-components-list = [ "windowmanager" "filemanager" ];
     };
@@ -90,6 +94,10 @@ in
     settings."org/mate/desktop/peripherals/keyboard/kbd" = {
       layouts = [ "gb" ];
       options = [ "terminate\tterminate:ctrl_alt_bksp" "Compose key\tcompose:caps" ];
+    };
+    settings."org/mate/desktop/peripherals/mouse" = {
+      cursor-size = 24;
+      cursor-theme = "mate";
     };
   };
 }
