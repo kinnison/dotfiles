@@ -11,3 +11,4 @@ fi
 ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 source "$ZDOTDIR/zshrc"
 
+eval "$(direnv hook zsh)"

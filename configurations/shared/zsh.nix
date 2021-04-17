@@ -1,5 +1,7 @@
 { pkgs, dotroot, ... }: {
-  home.packages = with pkgs; [ zsh ];
+  home.packages = with pkgs; [ zsh direnv ];
+
+  services.lorri.enable = true;
 
   home.file.".zshrc".source = "${dotroot}/zshrc";
   home.file.".profile".source = "${dotroot}/profile";
