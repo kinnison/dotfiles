@@ -36,11 +36,9 @@
       homeConfigurations = {
         test = make-home {
           modules = [
-            ./configurations/shared/zsh.nix
-            ./configurations/shared/gui.nix
-            ./configurations/shared/git.nix
-            ./configurations/shared/ssh.nix
-            ./configurations/shared/vscode.nix
+            ./configurations/shared
+            ./configurations/mail
+            ./configurations/mail/test.nix
           ];
         };
       };
