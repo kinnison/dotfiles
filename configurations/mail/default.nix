@@ -136,4 +136,9 @@ in {
   };
 
   accounts.email.maildirBasePath = maildirBase;
+
+  services.mbsync = {
+    postExec = "${pkgs.mu}/bin/mu index";
+    frequency = "*:0/3";
+  };
 }

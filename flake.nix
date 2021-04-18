@@ -39,6 +39,7 @@
             ./configurations/shared
             ./configurations/mail
             ./configurations/mail/test.nix
+            ./configurations/mail/personal.nix
           ];
         };
       };
