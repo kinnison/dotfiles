@@ -1,8 +1,11 @@
 # User configuration valid on all systems
 { config, pkgs, lib, homeDirectory, ... }:
-let xdg = config.xdg;
+let
+  xdg = config.xdg;
+  folder-config = (import ./mail/folder-config.nix { inherit config lib; });
 in {
   _module.args.dotroot = ./../dotfiles;
+  _module.args.folder-config = folder-config;
 
   home.activation = {
     xdg-prep-dir = lib.hm.dag.entryAfter [ "writeBoundary" ] ''

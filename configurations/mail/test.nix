@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, folder-config, ... }: {
   # According to Tristan, this works around https://github.com/nix-community/home-manager/issues/249
   systemd.user.services.mbsync.Service.Environment =
     "PATH=${pkgs.sops}/bin:${pkgs.gnupg}/bin";
@@ -36,9 +36,7 @@
       neomutt = {
         enable = true;
         sendMailCommand = "msmtp --read-recipients";
-        extraConfig = ''
-          named-mailboxes `find ${config.accounts.email.maildirBasePath}/test -type d ! \( -path ${config.accounts.email.maildirBasePath}/test -or -name new -or -name cur -or -name tmp \) -printf '"%P" =%P '`
-        '';
+        extraConfig = (folder-config config.accounts.email.accounts);
       };
       signature = {
         showSignature = "append";

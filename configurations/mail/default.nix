@@ -1,4 +1,4 @@
-{ config, pkgs, dotroot, ... }:
+{ config, pkgs, dotroot, lib, ... }:
 
 let
   maildirBase = "${config.xdg.dataHome}/mail";
@@ -62,9 +62,12 @@ let
     unignore from to cc subject date list-id
   '';
 in {
-  home.packages = with pkgs; [ neomutt ];
+  config.home.packages = with pkgs; [ neomutt ];
 
-  programs = {
+  options.accounts.email.accounts = with lib;
+    mkOption { type = with types; attrsOf (submodule (import ./options.nix)); };
+
+  config.programs = {
     mbsync.enable = true;
     msmtp.enable = true;
     mu.enable = true;
@@ -73,7 +76,8 @@ in {
       sidebar = {
         enable = true;
         shortPath = true;
-        format = "%D%?F? [%F]?%* %?N?%N/?%S";
+        format = "%D%?F? [%F]?%* %?N?%N/?%?S?%S?";
+        width = 30;
       };
       checkStatsInterval = 60;
       editor = "vim +/^$ ++1";
@@ -135,10 +139,36 @@ in {
     };
   };
 
-  accounts.email.maildirBasePath = maildirBase;
+  config.accounts.email.maildirBasePath = maildirBase;
 
-  services.mbsync = {
-    postExec = "${pkgs.mu}/bin/mu index";
+  config.services.mbsync = {
+    preExec = "${config.xdg.dataHome}/mail/.presync";
+    postExec = "${config.xdg.dataHome}/mail/.postsync";
     frequency = "*:0/3";
+  };
+
+  config.xdg.dataFile."mail/.postsync" = {
+    executable = true;
+    text = ''
+      #!/bin/sh
+
+      ${pkgs.mu}/bin/mu index
+    '';
+  };
+
+  config.xdg.dataFile."mail/.presync" = {
+    executable = true;
+    text = with lib;
+      let
+        mbsyncAccounts = filter (a: a.mbsync.enable)
+          (attrValues config.accounts.email.accounts);
+      in ''
+        #!/bin/sh
+
+        for account in ${concatMapStringsSep " " (a: a.name) mbsyncAccounts}; do
+          target="${config.xdg.dataHome}/mail/$account/.null"
+          ${pkgs.coreutils}/bin/ln -sf /dev/null "$target"
+        done
+      '';
   };
 }
