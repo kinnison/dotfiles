@@ -1,4 +1,4 @@
-{ config, pkgs, folder-config, ... }: {
+{ systemConfig, config, pkgs, folder-config, ... }: {
   # According to Tristan, this works around https://github.com/nix-community/home-manager/issues/249
   systemd.user.services.mbsync.Service.Environment =
     "PATH=${pkgs.sops}/bin:${pkgs.gnupg}/bin";
@@ -32,10 +32,11 @@
       msmtp = {
         enable = true;
         extraConfig.from = "test@digital-scurf.org";
+        extraConfig.domain = systemConfig.networking.hostName;
       };
       neomutt = {
         enable = true;
-        sendMailCommand = "msmtp --read-recipients";
+        sendMailCommand = "msmtpq --read-recipients";
         extraConfig = (folder-config config.accounts.email.accounts);
       };
       signature = {

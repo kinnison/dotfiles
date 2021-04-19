@@ -27,5 +27,9 @@ in {
   systemd.user.sockets.gpg-agent-ssh.Socket.ExecStartPost =
     "${pkgs.systemd}/bin/systemctl --user set-environment SSH_AUTH_SOCK=%t/gnupg/S.gpg-agent.ssh";
 
+  systemd.user.sessionVariables = {
+    inherit (config.home.sessionVariables) MSMTP_QUEUE;
+  };
+
   home.stateVersion = "20.09";
 }

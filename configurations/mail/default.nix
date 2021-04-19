@@ -171,4 +171,23 @@ in {
         done
       '';
   };
+
+  # We use msmtpq to send email, which means if we save the mail offline we
+  # can run this queue runner from time to time.
+  config.systemd.user.services.msmtp-queue-runner = {
+    Unit = { Description = "msmtp-queue runner"; };
+    Service = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.msmtp}/bin/msmtp-queue -r";
+    };
+  };
+
+  config.systemd.user.timers.msmtp-queue-runner = {
+    Unit = { Description = "msmtp-queue runner"; };
+    Timer = {
+      Unit = "msmtp-queue-runner.service";
+      OnCalendar = "*:0/5";
+    };
+    Install = { WantedBy = [ "timers.target" ]; };
+  };
 }
