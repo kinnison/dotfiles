@@ -21,5 +21,8 @@ in {
     enableSshSupport = true;
   };
 
+  systemd.user.sockets.gpg-agent-ssh.Socket.ExecStartPost =
+    "${pkgs.systemd}/bin/systemctl --user set-environment SSH_AUTH_SOCK=%t/gnupg/S.gpg-agent.ssh";
+
   home.stateVersion = "20.09";
 }
