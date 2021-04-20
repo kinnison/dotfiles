@@ -310,9 +310,9 @@ _vcsify_path () {
 	_VCS_STATUS=",${_VCS_STATUS}"
     fi
     if [[ $(basename $_VCS_ROOT) == $_VCS_BRANCH ]]; then
-	_VCS_PROMPT_BRANCH="[${_VCS_REVNO}${_VCS_STATUS}]"
+	_VCS_PROMPT_BRANCH="${_VCS_REVNO}${_VCS_STATUS}"
     else
-	_VCS_PROMPT_BRANCH="[${_VCS_BRANCH}:${_VCS_REVNO}${_VCS_STATUS}]"
+	_VCS_PROMPT_BRANCH="${_VCS_BRANCH}:${_VCS_REVNO}${_VCS_STATUS}"
     fi
     _VCS_PROMPT_LEAF=${PWD#${_VCS_ROOT}}
 }
@@ -394,6 +394,18 @@ _check_keys () {
     fi
 }
 
+_FLAKE_BADGE="❄"
+
+_find_flake () {
+    if [ "x$_VCS" = "xgit" ]; then
+        if [ -r "${_VCS_ROOT}/flake.nix" ]; then
+            _FLAKE_LABEL="${_FLAKE_BADGE}"
+        else
+            _FLAKE_LABEL=""
+        fi
+    fi
+}
+
 # Now hide any functions which won't work due to missing apps.
 
 which bzr >/dev/null 2>&1 || { 
@@ -466,10 +478,14 @@ precmd () {
     _check_keys
 
     psvar[7]="${_SSH_LABEL}"
+
+    _find_flake
+
+    psvar[8]="${_FLAKE_LABEL}"
 }
 
 _VCS_PROMPT="${_VCS_COLOUR}(%1v)${_VCS_RESET}"
-_VCS_RPROMPT="%2v${_VCS_BRANCH_COLOUR}%3v${_VCS_RESET}%4v"
+_VCS_RPROMPT="%2v${_VCS_BRANCH_COLOUR}[%(8V.%8v .)%3v]${_VCS_RESET}%4v"
 
 SHELLDEPTH=$((${SHELLDEPTH:-0} + 1))
 export SHELLDEPTH
