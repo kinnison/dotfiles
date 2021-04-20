@@ -32,7 +32,7 @@ in {
     text = ''
       #!${pkgs.bash}/bin/bash
 
-      sleep 2
+      ${pkgs.coreutils}/bin/sleep 2
 
       exec ${pkgs.polybar}/bin/polybar -r ${systemConfig.networking.hostName}
     '';
