@@ -4,7 +4,12 @@ let xdg = config.xdg;
 in {
   # First set up the main dependencies
 
-  home.packages = with pkgs; [ firefox polybar ];
+  home.packages = with pkgs; [ unstable.firefox polybar ];
+
+  programs.browserpass = {
+    enable = true;
+    browsers = [ "firefox" ];
+  };
 
   # Now configure the homedir to work properly
   # Sadly? xmonad isn't very XDGish
