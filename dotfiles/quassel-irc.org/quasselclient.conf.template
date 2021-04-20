@@ -1,0 +1,162 @@
+[Buffer]
+__default__\ErrorMsgsTarget=1
+__default__\ServerNoticesTarget=2
+__default__\UserNoticesTarget=5
+
+[Config]
+Version=1
+VersionMinor=9
+
+[CoreAccounts]
+1\AccountId=1
+1\AccountName=Gruntle
+1\General\BufferViewOverlay=1, 0
+1\General\SSLCert=
+1\General\ShowNoClientSslWarning=true
+1\General\ShowNoCoreSslWarning=true
+1\General\SslCertDigestVersion=0
+1\HostName=irc.quassel.co.uk
+1\Internal=false
+1\Password=
+1\Port=4242
+1\ProxyHostName=
+1\ProxyPassword=
+1\ProxyPort=8080
+1\ProxyType=0
+1\ProxyUser=
+1\StorePassword=false
+1\UseSSL=true
+1\User=dsilvers
+1\Uuid={2f50c25c-bbf8-424d-81f8-eb94a89a7b2a}
+AutoConnectAccount=1
+AutoConnectOnStartup=true
+AutoConnectToFixedAccount=false
+LastAccount=1
+
+[InputWidget]
+EnableEmacsMode=false
+EnableLineWrap=true
+EnableMultiLine=true
+EnablePerChatHistory=true
+EnableScrollBars=true
+MaxNumLines=5
+ShowNickSelector=true
+ShowStyleButtons=true
+
+[QtUi]
+ActiveBufferView-1=0
+ChatView\145\FirstColumnHandlePos=109
+ChatView\145\SecondColumnHandlePos=235
+ChatView\__default__\AutoMarkerLine=true
+ChatView\__default__\AutoMarkerLineOnLostFocus=true
+ChatView\__default__\FirstColumnHandlePos=109
+ChatView\__default__\SecondColumnHandlePos=235
+ChatView\__default__\SenderPrefixMode=1
+ChatView\__default__\ShowSenderBrackets=false
+ChatView\__default__\ShowWebPreview=false
+ChatView\__default__\TimestampFormat=" hh:mm:ss"
+ChatView\__default__\UseCustomTimestampFormat=false
+ChatView\__default__\WebSearchUrlFormat="https://www.google.com/search?q=%s"
+LastUsedBufferId=149
+Locale=@Variant(\0\0\0\x12\0\0\0\n\0\x65\0n\0_\0U\0S)
+MainWinGeometry=@ByteArray(\x1\xd9\xd0\xcb\0\x3\0\0\0\0\0\0\0\0\0\x1e\0\0\x6?\0\0\x3\x83\0\0\0\0\0\0\0\x1e\0\0\x6?\0\0\x3\x83\0\0\0\0\0\0\0\0\x6@\0\0\0\0\0\0\0\x1e\0\0\x6?\0\0\x3\x83)
+MainWinHidden=false
+MainWinMaximized=false
+MainWinMinimized=false
+MainWinPos=@Point(0 30)
+MainWinSize=@Size(1600 870)
+MainWinState=@ByteArray(\0\0\0\xff\0\0\0\0\xfd\0\0\0\x4\0\0\0\0\0\0\x1\0\0\0\x3\x36\xfc\x2\0\0\0\x1\xfb\0\0\0 \0\x42\0u\0\x66\0\x66\0\x65\0r\0V\0i\0\x65\0w\0\x44\0o\0\x63\0k\0-\0\x31\x2\0\0\0\x1\0\0\0\x36\0\0\0\xfe\0\0\x3\x34\0\0\0\x1\0\0\0\x8a\0\0\x3\x30\xfc\x2\0\0\0\x2\xfb\0\0\0 \0\x42\0u\0\x66\0\x66\0\x65\0r\0V\0i\0\x65\0w\0\x44\0o\0\x63\0k\0-\0\x30\x1\0\0\0\x17\0\0\x2\x9d\0\0\0t\0\xff\xff\xff\xfb\0\0\0\x10\0N\0i\0\x63\0k\0\x44\0o\0\x63\0k\x1\0\0\x2\xba\0\0\0\x8d\0\0\0\x14\0\xff\xff\xff\0\0\0\x2\0\0\x5\xb0\0\0\0\x19\xfc\x2\0\0\0\x2\xfb\0\0\0\x1e\0\x43\0h\0\x61\0t\0M\0o\0n\0i\0t\0o\0r\0\x44\0o\0\x63\0k\0\0\0\0\0\xff\xff\xff\xff\0\0\0\x46\0\xff\xff\xff\xfb\0\0\0\x12\0T\0o\0p\0i\0\x63\0\x44\0o\0\x63\0k\x1\0\0\0\x17\0\0\0\x19\0\0\0\x19\0\0\0\x19\0\0\0\x3\0\0\x5\xb0\0\0\0\x1f\xfc\x1\0\0\0\x1\xfb\0\0\0\x12\0I\0n\0p\0u\0t\0\x44\0o\0\x63\0k\x1\0\0\0\0\0\0\x5\xb0\0\0\x1\x88\0\xff\xff\xff\0\0\x5\xb0\0\0\x2\xec\0\0\0\x1\0\0\0\x2\0\0\0\x1\0\0\0\x2\xfc\0\0\0\x2\0\0\0\x2\0\0\0\x1\0\0\0\x16\0N\0i\0\x63\0k\0T\0o\0o\0l\0\x42\0\x61\0r\0\0\0\0\0\xff\xff\xff\xff\0\0\0\0\0\0\0\0\0\0\0\x2\0\0\0\x1\0\0\0\x16\0M\0\x61\0i\0n\0T\0o\0o\0l\0\x42\0\x61\0r\0\0\0\0\0\xff\xff\xff\xff\0\0\0\0\0\0\0\0)
+MainWinState-1=@ByteArray(\0\0\0\xff\0\0\0\x1\xfd\0\0\0\x4\0\0\0\0\0\0\x1\0\0\0\x3\x36\xfc\x2\0\0\0\x1\xfb\0\0\0 \0\x42\0u\0\x66\0\x66\0\x65\0r\0V\0i\0\x65\0w\0\x44\0o\0\x63\0k\0-\0\x31\x2\0\0\0\x1\0\0\0\x36\0\0\0\xfe\0\0\x3\x34\0\0\0\x1\0\0\0\x8a\0\0\x3\x30\xfc\x2\0\0\0\x2\xfb\0\0\0 \0\x42\0u\0\x66\0\x66\0\x65\0r\0V\0i\0\x65\0w\0\x44\0o\0\x63\0k\0-\0\x30\x1\0\0\0\x17\0\0\x2\x9d\0\0\0t\0\xff\xff\xff\xfb\0\0\0\x10\0N\0i\0\x63\0k\0\x44\0o\0\x63\0k\x1\0\0\x2\xba\0\0\0\x8d\0\0\0\x14\0\xff\xff\xff\0\0\0\x2\0\0\x5\xb0\0\0\0\x19\xfc\x2\0\0\0\x2\xfb\0\0\0\x1e\0\x43\0h\0\x61\0t\0M\0o\0n\0i\0t\0o\0r\0\x44\0o\0\x63\0k\0\0\0\0\0\xff\xff\xff\xff\0\0\0\x46\0\xff\xff\xff\xfb\0\0\0\x12\0T\0o\0p\0i\0\x63\0\x44\0o\0\x63\0k\x1\0\0\0\x17\0\0\0\x19\0\0\0\x19\0\0\0\x19\0\0\0\x3\0\0\x5\xb0\0\0\0\x1f\xfc\x1\0\0\0\x1\xfb\0\0\0\x12\0I\0n\0p\0u\0t\0\x44\0o\0\x63\0k\x1\0\0\0\0\0\0\x5\xb0\0\0\x1\x88\0\xff\xff\xff\0\0\x5\xb0\0\0\x2\xec\0\0\0\x1\0\0\0\x2\0\0\0\x1\0\0\0\x2\xfc\0\0\0\x2\0\0\0\x2\0\0\0\x1\0\0\0\x16\0N\0i\0\x63\0k\0T\0o\0o\0l\0\x42\0\x61\0r\0\0\0\0\0\xff\xff\xff\xff\0\0\0\0\0\0\0\0\0\0\0\x2\0\0\0\x1\0\0\0\x16\0M\0\x61\0i\0n\0T\0o\0o\0l\0\x42\0\x61\0r\0\0\0\0\0\xff\xff\xff\xff\0\0\0\0\0\0\0\0)
+MinimizeOnClose=false
+ShowMenuBar=true
+Style=Fusion
+UseSystemTrayIcon=true
+
+[QtUiStyle]
+Colors\ActionMsg=@Variant(\0\0\0\x43\x1\xff\xff\0\0\0\0\xff\xff\0\0)
+Colors\ChannelMsg=@Variant(\0\0\0\x43\x1\xff\xff<<<<<<\0\0)
+Colors\ChatViewBackground=@Variant(\0\0\0\x43\x1\xff\xff\xff\xff\xff\xff\xff\xff\0\0)
+Colors\CommandMsg=@Variant(\0\0\0\x43\x1\xff\xffpppppp\0\0)
+Colors\ErrorMsg=@Variant(\0\0\0\x43\x1\xff\xff\xb3\xb3\xe\xe\xe\xe\0\0)
+Colors\Highlight=@Variant(\0\0\0\x43\x1\xff\xff\0\0\0\0\0\0\0\0)
+Colors\HighlightBackground=@Variant(\0\0\0\x43\x1\xff\xff\xff\xff\x80\x80\0\0\0\0)
+Colors\MarkerLine=@Variant(\0\0\0\x43\x1\xff\xff\xff\xff\0\0\0\0\0\0)
+Colors\Sender00=@Variant(\0\0\0\x43\x1\xff\xff\xcc\xcc\0\0\0\0\0\0)
+Colors\Sender01=@Variant(\0\0\0\x43\x1\xff\xff\0\0ll\xad\xad\0\0)
+Colors\Sender02=@Variant(\0\0\0\x43\x1\xff\xffMM\x99\x99\0\0\0\0)
+Colors\Sender03=@Variant(\0\0\0\x43\x1\xff\xff\x66\x66\0\0\xcc\xcc\0\0)
+Colors\Sender04=@Variant(\0\0\0\x43\x1\xff\xff\xa6\xa6}}\0\0\0\0)
+Colors\Sender05=@Variant(\0\0\0\x43\x1\xff\xff\0\0\x99\x99''\0\0)
+Colors\Sender06=@Variant(\0\0\0\x43\x1\xff\xff\0\0\x30\x30\xc0\xc0\0\0)
+Colors\Sender07=@Variant(\0\0\0\x43\x1\xff\xff\xcc\xcc\0\0\x9a\x9a\0\0)
+Colors\Sender08=@Variant(\0\0\0\x43\x1\xff\xff\xb9\xb9\x46\x46\0\0\0\0)
+Colors\Sender09=@Variant(\0\0\0\x43\x1\xff\xff\x86\x86\x99\x99\0\0\0\0)
+Colors\Sender10=@Variant(\0\0\0\x43\x1\xff\xff\x14\x14\x99\x99\0\0\0\0)
+Colors\Sender11=@Variant(\0\0\0\x43\x1\xff\xff\0\0\x99\x99``\0\0)
+Colors\Sender12=@Variant(\0\0\0\x43\x1\xff\xff\0\0ll\xad\xad\0\0)
+Colors\Sender13=@Variant(\0\0\0\x43\x1\xff\xff\0\0\x99\x99\xcc\xcc\0\0)
+Colors\Sender14=@Variant(\0\0\0\x43\x1\xff\xff\xb3\xb3\0\0\xcc\xcc\0\0)
+Colors\Sender15=@Variant(\0\0\0\x43\x1\xff\xff\xcc\xcc\0\0MM\0\0)
+Colors\SenderSelf=@Variant(\0\0\0\x43\x1\xff\xff..4466\0\0)
+Colors\ServerMsg=@Variant(\0\0\0\x43\x1\xff\xff\x91\x91\x64\x64\t\t\0\0)
+Colors\Timestamp=@Variant(\0\0\0\x43\x1\xff\xffpp||pp\0\0)
+Colors\UseChatViewColors=false
+Colors\UseNickGeneralColors=true
+Colors\UseSenderActionColors=true
+Colors\UseSenderColors=false
+Fonts\ChatView=@Variant(\0\0\0@\0\0\0\x16\0I\0n\0\x63\0o\0n\0s\0o\0l\0\x61\0t\0\x61@0\0\0\0\0\0\0\xff\xff\xff\xff\x5\x1\0\x32\x10)
+Fonts\UseCustomChatViewFont=true
+
+[Session]
+1051de4b31e2e2f091161894250867814500000277430026\MainWinGeometry=@ByteArray(\x1\xd9\xd0\xcb\0\x3\0\0\0\0\0\0\0\0\0\x1e\0\0\x6?\0\0\x3\x83\0\0\0\0\0\0\0\x1e\0\0\x6?\0\0\x3\x83\0\0\0\0\0\0\0\0\x6@\0\0\0\0\0\0\0\x1e\0\0\x6?\0\0\x3\x83)
+1051de4b31e2e2f091161894250867814500000277430026\MainWinHidden=false
+1051de4b31e2e2f091161894250867814500000277430026\MainWinMaximized=false
+1051de4b31e2e2f091161894250867814500000277430026\MainWinMinimized=false
+1051de4b31e2e2f091161894250867814500000277430026\MainWinPos=@Point(0 30)
+1051de4b31e2e2f091161894250867814500000277430026\MainWinSize=@Size(1600 870)
+1051de4b31e2e2f091161894250867814500000277430026\MainWinState="@ByteArray(\0\0\0\xff\0\0\0\0\xfd\0\0\0\x4\0\0\0\0\0\0\x1\0\0\0\x3\x36\xfc\x2\0\0\0\x1\xfb\0\0\0 \0\x42\0u\0\x66\0\x66\0\x65\0r\0V\0i\0\x65\0w\0\x44\0o\0\x63\0k\0-\0\x31\x2\0\0\0\x1\0\0\0\x36\0\0\0\xfe\0\0\x3\x34\0\0\0\x1\0\0\0;\0\0\x3\x36\xfc\x2\0\0\0\x2\xfb\0\0\0 \0\x42\0u\0\x66\0\x66\0\x65\0r\0V\0i\0\x65\0w\0\x44\0o\0\x63\0k\0-\0\x30\x1\0\0\0\x17\0\0\x2\xa1\0\0\0\0\0\0\0\0\xfb\0\0\0\x10\0N\0i\0\x63\0k\0\x44\0o\0\x63\0k\x1\0\0\0\x17\0\0\x3\x36\0\0\0\x14\0\0\0\x14\0\0\0\x2\0\0\x5\xff\0\0\0\x19\xfc\x2\0\0\0\x2\xfb\0\0\0\x1e\0\x43\0h\0\x61\0t\0M\0o\0n\0i\0t\0o\0r\0\x44\0o\0\x63\0k\0\0\0\0\0\xff\xff\xff\xff\0\0\0\x36\0\xff\xff\xff\xfb\0\0\0\x12\0T\0o\0p\0i\0\x63\0\x44\0o\0\x63\0k\x1\0\0\0\x17\0\0\0\x19\0\0\0\x19\0\0\0\x19\0\0\0\x3\0\0\x5\xff\0\0\0\x1f\xfc\x1\0\0\0\x1\xfb\0\0\0\x12\0I\0n\0p\0u\0t\0\x44\0o\0\x63\0k\x1\0\0\0\0\0\0\x5\xff\0\0\x1\x88\0\xff\xff\xff\0\0\x5\xff\0\0\x2\xf2\0\0\0\x1\0\0\0\x2\0\0\0\x1\0\0\0\x2\xfc\0\0\0\x2\0\0\0\x2\0\0\0\x1\0\0\0\x16\0N\0i\0\x63\0k\0T\0o\0o\0l\0\x42\0\x61\0r\0\0\0\0\0\xff\xff\xff\xff\0\0\0\0\0\0\0\0\0\0\0\x2\0\0\0\x1\0\0\0\x16\0M\0\x61\0i\0n\0T\0o\0o\0l\0\x42\0\x61\0r\0\0\0\0\0\xff\xff\xff\xff\0\0\0\0\0\0\0\0)"
+1051de4b31e2e2f091161894250867814500000277430026\_sessionAge=3
+1051de4b31e2e2f091161894334456720700000277430027\MainWinGeometry=@ByteArray(\x1\xd9\xd0\xcb\0\x3\0\0\0\0\0\0\0\0\0\x1e\0\0\x6?\0\0\x3\x83\0\0\0\0\0\0\0\x1e\0\0\x6?\0\0\x3\x83\0\0\0\0\0\0\0\0\x6@\0\0\0\0\0\0\0\x1e\0\0\x6?\0\0\x3\x83)
+1051de4b31e2e2f091161894334456720700000277430027\MainWinHidden=false
+1051de4b31e2e2f091161894334456720700000277430027\MainWinMaximized=false
+1051de4b31e2e2f091161894334456720700000277430027\MainWinMinimized=false
+1051de4b31e2e2f091161894334456720700000277430027\MainWinPos=@Point(0 30)
+1051de4b31e2e2f091161894334456720700000277430027\MainWinSize=@Size(1600 870)
+1051de4b31e2e2f091161894334456720700000277430027\MainWinState="@ByteArray(\0\0\0\xff\0\0\0\0\xfd\0\0\0\x4\0\0\0\0\0\0\x1\0\0\0\x3\x36\xfc\x2\0\0\0\x1\xfb\0\0\0 \0\x42\0u\0\x66\0\x66\0\x65\0r\0V\0i\0\x65\0w\0\x44\0o\0\x63\0k\0-\0\x31\x2\0\0\0\x1\0\0\0\x36\0\0\0\xfe\0\0\x3\x34\0\0\0\x1\0\0\0;\0\0\x3\x36\xfc\x2\0\0\0\x2\xfb\0\0\0 \0\x42\0u\0\x66\0\x66\0\x65\0r\0V\0i\0\x65\0w\0\x44\0o\0\x63\0k\0-\0\x30\x1\0\0\0\x17\0\0\x2\xa1\0\0\0\0\0\0\0\0\xfb\0\0\0\x10\0N\0i\0\x63\0k\0\x44\0o\0\x63\0k\x1\0\0\0\x17\0\0\x3\x36\0\0\0\x14\0\0\0\x14\0\0\0\x2\0\0\x5\xff\0\0\0\x19\xfc\x2\0\0\0\x2\xfb\0\0\0\x1e\0\x43\0h\0\x61\0t\0M\0o\0n\0i\0t\0o\0r\0\x44\0o\0\x63\0k\0\0\0\0\0\xff\xff\xff\xff\0\0\0\x46\0\xff\xff\xff\xfb\0\0\0\x12\0T\0o\0p\0i\0\x63\0\x44\0o\0\x63\0k\x1\0\0\0\x17\0\0\0\x19\0\0\0\x19\0\0\0\x19\0\0\0\x3\0\0\x5\xff\0\0\0\x1f\xfc\x1\0\0\0\x1\xfb\0\0\0\x12\0I\0n\0p\0u\0t\0\x44\0o\0\x63\0k\x1\0\0\0\0\0\0\x5\xff\0\0\x1\x88\0\xff\xff\xff\0\0\x5\xff\0\0\x2\xf2\0\0\0\x1\0\0\0\x2\0\0\0\x1\0\0\0\x2\xfc\0\0\0\x2\0\0\0\x2\0\0\0\x1\0\0\0\x16\0N\0i\0\x63\0k\0T\0o\0o\0l\0\x42\0\x61\0r\0\0\0\0\0\xff\xff\xff\xff\0\0\0\0\0\0\0\0\0\0\0\x2\0\0\0\x1\0\0\0\x16\0M\0\x61\0i\0n\0T\0o\0o\0l\0\x42\0\x61\0r\0\0\0\0\0\xff\xff\xff\xff\0\0\0\0\0\0\0\0)"
+1051de4b31e2e2f091161894334456720700000277430027\_sessionAge=2
+1051de4b31e2e2f091161894336633600700000277430028\MainWinGeometry=@ByteArray(\x1\xd9\xd0\xcb\0\x3\0\0\0\0\0\0\0\0\0\x1e\0\0\x6?\0\0\x3\x83\0\0\0\0\0\0\0\x1e\0\0\x6?\0\0\x3\x83\0\0\0\0\0\0\0\0\x6@\0\0\0\0\0\0\0\x1e\0\0\x6?\0\0\x3\x83)
+1051de4b31e2e2f091161894336633600700000277430028\MainWinHidden=false
+1051de4b31e2e2f091161894336633600700000277430028\MainWinMaximized=false
+1051de4b31e2e2f091161894336633600700000277430028\MainWinMinimized=false
+1051de4b31e2e2f091161894336633600700000277430028\MainWinPos=@Point(0 30)
+1051de4b31e2e2f091161894336633600700000277430028\MainWinSize=@Size(1600 870)
+1051de4b31e2e2f091161894336633600700000277430028\MainWinState="@ByteArray(\0\0\0\xff\0\0\0\0\xfd\0\0\0\x4\0\0\0\0\0\0\x1\0\0\0\x3\x36\xfc\x2\0\0\0\x1\xfb\0\0\0 \0\x42\0u\0\x66\0\x66\0\x65\0r\0V\0i\0\x65\0w\0\x44\0o\0\x63\0k\0-\0\x31\x2\0\0\0\x1\0\0\0\x36\0\0\0\xfe\0\0\x3\x34\0\0\0\x1\0\0\0;\0\0\x3\x36\xfc\x2\0\0\0\x2\xfb\0\0\0 \0\x42\0u\0\x66\0\x66\0\x65\0r\0V\0i\0\x65\0w\0\x44\0o\0\x63\0k\0-\0\x30\x1\0\0\0\x17\0\0\x2\xa1\0\0\0\0\0\0\0\0\xfb\0\0\0\x10\0N\0i\0\x63\0k\0\x44\0o\0\x63\0k\x1\0\0\0\x17\0\0\x3\x36\0\0\0\x14\0\0\0\x14\0\0\0\x2\0\0\x5\xff\0\0\0\x19\xfc\x2\0\0\0\x2\xfb\0\0\0\x1e\0\x43\0h\0\x61\0t\0M\0o\0n\0i\0t\0o\0r\0\x44\0o\0\x63\0k\0\0\0\0\0\xff\xff\xff\xff\0\0\0\x46\0\xff\xff\xff\xfb\0\0\0\x12\0T\0o\0p\0i\0\x63\0\x44\0o\0\x63\0k\x1\0\0\0\x17\0\0\0\x19\0\0\0\x19\0\0\0\x19\0\0\0\x3\0\0\x5\xff\0\0\0\x1f\xfc\x1\0\0\0\x1\xfb\0\0\0\x12\0I\0n\0p\0u\0t\0\x44\0o\0\x63\0k\x1\0\0\0\0\0\0\x5\xff\0\0\x1\x88\0\xff\xff\xff\0\0\x5\xff\0\0\x2\xf2\0\0\0\x1\0\0\0\x2\0\0\0\x1\0\0\0\x2\xfc\0\0\0\x2\0\0\0\x2\0\0\0\x1\0\0\0\x16\0N\0i\0\x63\0k\0T\0o\0o\0l\0\x42\0\x61\0r\0\0\0\0\0\xff\xff\xff\xff\0\0\0\0\0\0\0\0\0\0\0\x2\0\0\0\x1\0\0\0\x16\0M\0\x61\0i\0n\0T\0o\0o\0l\0\x42\0\x61\0r\0\0\0\0\0\xff\xff\xff\xff\0\0\0\0\0\0\0\0)"
+1051de4b31e2e2f091161894336633600700000277430028\_sessionAge=1
+1051de4b31e2e2f091161894338269514600000277430029\MainWinGeometry=@ByteArray(\x1\xd9\xd0\xcb\0\x3\0\0\0\0\0\0\0\0\0\x1e\0\0\x6?\0\0\x3\x83\0\0\0\0\0\0\0\x1e\0\0\x6?\0\0\x3\x83\0\0\0\0\0\0\0\0\x6@\0\0\0\0\0\0\0\x1e\0\0\x6?\0\0\x3\x83)
+1051de4b31e2e2f091161894338269514600000277430029\MainWinHidden=false
+1051de4b31e2e2f091161894338269514600000277430029\MainWinMaximized=false
+1051de4b31e2e2f091161894338269514600000277430029\MainWinMinimized=false
+1051de4b31e2e2f091161894338269514600000277430029\MainWinPos=@Point(0 30)
+1051de4b31e2e2f091161894338269514600000277430029\MainWinSize=@Size(1600 870)
+1051de4b31e2e2f091161894338269514600000277430029\MainWinState="@ByteArray(\0\0\0\xff\0\0\0\0\xfd\0\0\0\x4\0\0\0\0\0\0\x1\0\0\0\x3\x36\xfc\x2\0\0\0\x1\xfb\0\0\0 \0\x42\0u\0\x66\0\x66\0\x65\0r\0V\0i\0\x65\0w\0\x44\0o\0\x63\0k\0-\0\x31\x2\0\0\0\x1\0\0\0\x36\0\0\0\xfe\0\0\x3\x34\0\0\0\x1\0\0\0;\0\0\x3\x36\xfc\x2\0\0\0\x2\xfb\0\0\0 \0\x42\0u\0\x66\0\x66\0\x65\0r\0V\0i\0\x65\0w\0\x44\0o\0\x63\0k\0-\0\x30\x1\0\0\0\x17\0\0\x2\x9c\0\0\0\0\0\0\0\0\xfb\0\0\0\x10\0N\0i\0\x63\0k\0\x44\0o\0\x63\0k\x1\0\0\0\x17\0\0\x3\x36\0\0\0\x14\0\0\0\x14\0\0\0\x2\0\0\x5\xff\0\0\0\x19\xfc\x2\0\0\0\x2\xfb\0\0\0\x1e\0\x43\0h\0\x61\0t\0M\0o\0n\0i\0t\0o\0r\0\x44\0o\0\x63\0k\0\0\0\0\0\xff\xff\xff\xff\0\0\0\x46\0\xff\xff\xff\xfb\0\0\0\x12\0T\0o\0p\0i\0\x63\0\x44\0o\0\x63\0k\x1\0\0\0\x17\0\0\0\x19\0\0\0\x19\0\0\0\x19\0\0\0\x3\0\0\x5\xff\0\0\0\x1f\xfc\x1\0\0\0\x1\xfb\0\0\0\x12\0I\0n\0p\0u\0t\0\x44\0o\0\x63\0k\x1\0\0\0\0\0\0\x5\xff\0\0\x1\x88\0\xff\xff\xff\0\0\x5\xff\0\0\x2\xf2\0\0\0\x1\0\0\0\x2\0\0\0\x1\0\0\0\x2\xfc\0\0\0\x2\0\0\0\x2\0\0\0\x1\0\0\0\x16\0N\0i\0\x63\0k\0T\0o\0o\0l\0\x42\0\x61\0r\0\0\0\0\0\xff\xff\xff\xff\0\0\0\0\0\0\0\0\0\0\0\x2\0\0\0\x1\0\0\0\x16\0M\0\x61\0i\0n\0T\0o\0o\0l\0\x42\0\x61\0r\0\0\0\0\0\xff\xff\xff\xff\0\0\0\0\0\0\0\0)"
+1051de4b31e2e2f091161894338269514600000277430029\_sessionAge=0
+
+[TabCompletion]
+AddSpaceMidSentence=false
+CompletionSuffix=": "
+
+[TopicWidget]
+DynamicResize=true
+ResizeOnHover=true
+
+[UiStyle]
+AllowMircColors=false
+CustomStyleSheetPath=@HOME@/.config/quassel-irc.org/DarkSolarized.qss
+Fonts\InputWidget=@Variant(\0\0\0@\0\0\0\x16\0I\0n\0\x63\0o\0n\0s\0o\0l\0\x61\0t\0\x61@0\0\0\0\0\0\0\xff\xff\xff\xff\x5\x1\0\x32\x10)
+Fonts\TopicWidget=@Variant(\0\0\0@\0\0\0\x16\0I\0n\0\x63\0o\0n\0s\0o\0l\0\x61\0t\0\x61@0\0\0\0\0\0\0\xff\xff\xff\xff\x5\x1\0\x32\x10)
+Fonts\UseCustomInputWidgetFont=true
+Fonts\UseCustomTopicWidgetFont=true
+Icons\FallbackTheme=breeze-dark
+Icons\InvertTray=false
+Icons\OverrideSystemTheme=true
+UseCustomStyleSheet=true
