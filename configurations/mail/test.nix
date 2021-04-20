@@ -10,7 +10,7 @@
       realName = "Daniel Silverstone";
       userName = "test@digital-scurf.org";
       passwordCommand =
-        "PASSWORD_STORE_DIR=${config.xdg.dataHome}/password-store ${pkgs.pass}/bin/pass personal/mail.pepperfish.net/test@digital-scurf.org | ${pkgs.coreutils}/bin/head -1 | ${pkgs.coreutils}/bin/tr -d '\\n'";
+        "${pkgs.pass}/bin/pass personal/mail.pepperfish.net/test@digital-scurf.org | ${pkgs.coreutils}/bin/head -1 | ${pkgs.coreutils}/bin/tr -d '\\n'";
       imap = {
         host = "mail.pepperfish.net";
         port = 993;

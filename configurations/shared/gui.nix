@@ -67,6 +67,7 @@ in {
     };
     settings."org/mate/desktop/session" = {
       required-components-list = [ "windowmanager" "filemanager" ];
+      gnome-compat-startup = [ "smproxy" ];
     };
     settings."org/mate/terminal/profiles/default" = {
       background-color = "#000000000000";
