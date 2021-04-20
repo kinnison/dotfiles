@@ -42,6 +42,13 @@
             ./configurations/mail/personal.nix
           ];
         };
+        parasomnix = make-home {
+          modules = [
+            ./configurations/shared
+            ./configurations/mail
+            ./configurations/mail/personal.nix
+          ];
+        };
       };
     }
     # Set up a "dev shell" that will work on all architectures
