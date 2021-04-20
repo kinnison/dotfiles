@@ -384,6 +384,16 @@ _find_debian () {
     _DEBIAN_LABEL="${_DEBIAN_BADGE}${version}"
 }
 
+_KEY_BADGE="🔑"
+
+_check_keys () {
+    if ssh-add -l >/dev/null 2>/dev/null; then
+	_SSH_LABEL="${_KEY_BADGE}"
+    else
+	_SSH_LABEL=""
+    fi
+}
+
 # Now hide any functions which won't work due to missing apps.
 
 which bzr >/dev/null 2>&1 || { 
@@ -452,6 +462,10 @@ precmd () {
     _find_debian && { _LABELS="${_LABELS}${_DEBIAN_LABEL}" }
 
     psvar[6]="$_LABELS"
+
+    _check_keys
+
+    psvar[7]="${_SSH_LABEL}"
 }
 
 _VCS_PROMPT="${_VCS_COLOUR}(%1v)${_VCS_RESET}"
@@ -468,7 +482,7 @@ fi
 
 # Prompt as machine%                                           /path/on/right
 PS1="%(5V.${_SUDO_ALLOWED}.${_SUDO_RESET})%m${_SUDO_RESET}${_SHELLDEPTH}%(1V.${_VCS_PROMPT}.)%(6V.(%6v).)%# "
-RPS1="%(1V.${_VCS_RPROMPT}.%~)"
+RPS1="%(1V.${_VCS_RPROMPT}.%~)%7v"
 
 if [ "x$debian_chroot" = "x" -a -e /etc/debian_chroot ]; then
   debian_chroot=$(cat /etc/debian_chroot)
@@ -478,3 +492,11 @@ if [ "x$debian_chroot" != "x" ]; then
   PS1="%(5V.${_SUDO_ALLOWED}.${_SUDO_RESET})%m${_SUDO_RESET}/$debian_chroot${_SHELLDEPTH}%(1V.${_VCS_PROMPT}.)%(6V.(%6v).)%# "
 fi
 
+# Finally set up to refresh the prompt every 5s or so
+
+TRAPALRM () {
+    precmd
+    zle reset-prompt
+}
+
+TMOUT=5
