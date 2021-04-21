@@ -1,21 +1,19 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 let
   package = pkgs.unstable.vscode-with-extensions.override {
-    vscodeExtensions = (
-      with pkgs.unstable.vscode-extensions; [
-        matklad.rust-analyzer
-        ms-python.python
-        ms-vscode.cpptools
-        ms-vscode-remote.remote-ssh
-        ms-vsliveshare.vsliveshare
-        jnoortheen.nix-ide
-        brettm12345.nixfmt-vscode
-        eamodio.gitlens
-        usernamehw.errorlens
-        tamasfe.even-better-toml
-        esbenp.prettier-vscode
-      ]
-    ) ++ pkgs.unstable.vscode-utils.extensionsFromVscodeMarketplace [
+    vscodeExtensions = (with pkgs.unstable.vscode-extensions; [
+      matklad.rust-analyzer
+      ms-python.python
+      ms-vscode.cpptools
+      ms-vscode-remote.remote-ssh
+      ms-vsliveshare.vsliveshare
+      jnoortheen.nix-ide
+      brettm12345.nixfmt-vscode
+      eamodio.gitlens
+      usernamehw.errorlens
+      tamasfe.even-better-toml
+      esbenp.prettier-vscode
+    ]) ++ pkgs.unstable.vscode-utils.extensionsFromVscodeMarketplace [
       {
         publisher = "rubymaniac";
         name = "vscode-direnv";
@@ -40,9 +38,8 @@ let
 
     ];
   };
-  my-vscode-package = lib.callPackage package {};
-in
-{
+  my-vscode-package = package // { pname = pkgs.unstable.vscode.pname; };
+in {
   programs.vscode = {
     enable = true;
     package = my-vscode-package;
@@ -60,13 +57,11 @@ in
       "nix.enableLanguageServer" = true;
 
     };
-    keybindings = [
-      {
-        key = "Enter";
-        command = "rust-analyzer.onEnter";
-        when = "editorTextFocus && !suggestWidgetVisible && editorLangId == rust";
-      }
-    ];
+    keybindings = [{
+      key = "Enter";
+      command = "rust-analyzer.onEnter";
+      when = "editorTextFocus && !suggestWidgetVisible && editorLangId == rust";
+    }];
   };
   home.packages = with pkgs; [ rustup nixfmt ];
 }
