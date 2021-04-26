@@ -9,7 +9,7 @@
       key = "0x3CCEBABE206C3B69";
       signByDefault = true;
     };
-    ignores = [ "target" "result" ];
+    ignores = [ "target" "result" ".direnv/" ];
     extraConfig = {
       branch.autoSetupRebase = "always";
       checkout.defaultRemote = "origin";
