@@ -57,7 +57,7 @@
         pkgs = inputs.nixpkgs.legacyPackages.${system};
         unstable-pkgs = inputs.nixpkgs-unstable.legacyPackages.${system};
       in {
-        packages = import ./pkgs { inherit pkgs unstable-pkgs; };
+        #packages = import ./pkgs { inherit pkgs unstable-pkgs; };
         devShell = pkgs.mkShell { buildInputs = with pkgs; [ nixfmt ]; };
       }));
 }
