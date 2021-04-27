@@ -147,6 +147,8 @@ in {
     frequency = "*:0/3";
   };
 
+  config.services.imapnotify.enable = true;
+
   config.xdg.dataFile."mail/.postsync" = {
     executable = true;
     text = ''

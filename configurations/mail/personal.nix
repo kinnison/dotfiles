@@ -68,6 +68,11 @@
         '';
       };
       mu.enable = true;
+      imapnotify = {
+        enable = true;
+        boxes = [ "INBOX" "Github" "Gitlab" ];
+        onNotify = "systemctl --user start mbsync.service";
+      };
     };
   };
 
