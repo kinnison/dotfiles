@@ -24,6 +24,7 @@ let
     set suspend = no
     set mark_old = no
     set wait_key = no
+    set strict_threads = yes
   '';
   muttColours = ''
     color index brightwhite default .
