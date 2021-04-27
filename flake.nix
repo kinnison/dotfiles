@@ -21,6 +21,7 @@
                 config.allowUnfree = true;
               };
             })
+            (final: prev: { local = import ./pkgs { pkgs = prev; }; })
           ];
 
           imports = [
@@ -57,7 +58,8 @@
         pkgs = inputs.nixpkgs.legacyPackages.${system};
         unstable-pkgs = inputs.nixpkgs-unstable.legacyPackages.${system};
       in {
-        #packages = import ./pkgs { inherit pkgs unstable-pkgs; };
+        packages =
+          import ./pkgs { pkgs = pkgs // { unstable = unstable-pkgs; }; };
         devShell = pkgs.mkShell { buildInputs = with pkgs; [ nixfmt ]; };
       }));
 }

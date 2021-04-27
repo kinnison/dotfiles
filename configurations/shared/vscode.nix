@@ -3,7 +3,7 @@ let
   package = pkgs.unstable.vscode-with-extensions.override {
     vscodeExtensions = (with pkgs.unstable.vscode-extensions; [
       matklad.rust-analyzer
-      ms-python.python
+      ms-python.python # cannot use pkgs.local.vscode.python as jupyter ext missing
       ms-vscode.cpptools
       ms-vscode-remote.remote-ssh
       ms-vsliveshare.vsliveshare
