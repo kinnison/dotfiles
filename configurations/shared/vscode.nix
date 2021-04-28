@@ -45,7 +45,7 @@ in {
     enable = true;
     package = my-vscode-package;
     userSettings = {
-      "update.channel" = "none";
+      "update.mode" = "none";
       "rust-analyzer.checkOnSave.command" = "clippy";
       "rust-analyzer.lens.methodReferences" = true;
       "rust-analyzer.lens.references" = true;
