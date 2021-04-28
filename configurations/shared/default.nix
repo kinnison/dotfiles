@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -10,4 +10,10 @@
     ./pass.nix
     ./irc.nix
   ];
+
+  home.packages = with pkgs;
+    [
+      # We want Python 3 available
+      python3
+    ];
 }
