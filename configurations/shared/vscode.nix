@@ -4,7 +4,6 @@ let
     vscodeExtensions = (with pkgs.unstable.vscode-extensions; [
       matklad.rust-analyzer
       pkgs.local.vscode.ms-python.python
-      pkgs.local.vscode.ms-toolsai.jupyter
       ms-vscode.cpptools
       ms-vscode-remote.remote-ssh
       ms-vsliveshare.vsliveshare
