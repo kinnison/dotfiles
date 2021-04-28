@@ -1,9 +1,10 @@
 { pkgs, ... }:
 let
-  package = pkgs.unstable.vscode-with-extensions.override {
-    vscodeExtensions = (with pkgs.unstable.vscode-extensions; [
+  base = pkgs.kinnison;
+  package = base.vscode-with-extensions.override {
+    vscodeExtensions = (with base.vscode-extensions; [
       matklad.rust-analyzer
-      pkgs.local.vscode.ms-python.python
+      ms-python.python
       ms-vscode.cpptools
       ms-vscode-remote.remote-ssh
       ms-vsliveshare.vsliveshare
@@ -13,7 +14,7 @@ let
       usernamehw.errorlens
       tamasfe.even-better-toml
       esbenp.prettier-vscode
-    ]) ++ pkgs.unstable.vscode-utils.extensionsFromVscodeMarketplace [
+    ]) ++ base.vscode-utils.extensionsFromVscodeMarketplace [
       {
         publisher = "rubymaniac";
         name = "vscode-direnv";
@@ -38,7 +39,7 @@ let
 
     ];
   };
-  my-vscode-package = package // { pname = pkgs.unstable.vscode.pname; };
+  my-vscode-package = package // { pname = base.vscode.pname; };
 in {
   programs.vscode = {
     enable = true;

@@ -36,16 +36,32 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1619631044,
-        "narHash": "sha256-2sFBhkcvdg51GxJvoHoiXu6ipRobOMjjcDpWG7zf+lU=",
+        "lastModified": 1619641082,
+        "narHash": "sha256-LVTBOK0FC28E+WyOv+ZWQSrzR8q3k62wDNHl/PLn6d8=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "f93ecc4f6bc60414d8b73dbdf615ceb6a2c604df",
+        "rev": "dcbf56a1025e35bdf323e2c8a4273ee79de63b6e",
         "type": "github"
       },
       "original": {
         "id": "nixpkgs",
         "type": "indirect"
+      }
+    },
+    "nixpkgs-kinnison": {
+      "locked": {
+        "lastModified": 1619640726,
+        "narHash": "sha256-Mqyjm5OXdHswufzznxahT7iWe/l9Q0MKON/zqvErfKo=",
+        "owner": "kinnison",
+        "repo": "nixpkgs",
+        "rev": "c93888b3a90ad42b33716c61afa13653f18c03b4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kinnison",
+        "ref": "update-vscode-python",
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
     "nixpkgs-unstable": {
@@ -85,6 +101,7 @@
         "flake-utils": "flake-utils",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs_2",
+        "nixpkgs-kinnison": "nixpkgs-kinnison",
         "nixpkgs-unstable": "nixpkgs-unstable"
       }
     }
