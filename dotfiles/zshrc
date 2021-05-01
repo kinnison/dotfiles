@@ -4,10 +4,6 @@
 [ -f "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ] && source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
 [ -f "/etc/profiles/per-user/$USER/etc/profile.d/hm-session-vars.sh" ] && source "/etc/profiles/per-user/$USER/etc/profile.d/hm-session-vars.sh"
 
-if [[ -o interactive ]]; then
-  echo "Interactive shell, hurrah"
-fi
-
 ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 source "$ZDOTDIR/zshrc"
 
