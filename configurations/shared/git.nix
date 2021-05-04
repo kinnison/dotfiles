@@ -1,6 +1,9 @@
-{ ... }:
-
-{
+{ config, dotroot, homeDirectory, ... }:
+let
+  # You can remove this dodgy set after 21.05 (see below) and replace it with
+  # gpgcfg = config.programs.gpg;
+  gpgcfg = { homedir = ".gnupg"; };
+in {
   programs.gh = { enable = true; };
 
   programs.git = {
@@ -36,6 +39,18 @@
 
   # Since Git uses GnuPG to sign things...
 
-  programs.gpg = { enable = true; };
+  programs.gpg = {
+    # TODO: See if we can shift this into ~/.config eventually
+    # Sadly `homedir` is not available until 21.05 of home-manager
+    # homedir = "${homeDirectory}/.gnupg";
+    enable = true;
+    settings = {
+      keyring = "managed.kbx";
+      primary-keyring = "pubring.kbx";
+    };
+  };
 
+  home.file."${gpgcfg.homedir}/managed.kbx" = {
+    source = "${dotroot}/gnupg-keyring.kbx";
+  };
 }
