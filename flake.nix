@@ -4,7 +4,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-20.09";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-kinnison.url = "github:kinnison/nixpkgs/update-vscode-python";
     home-manager.url = "github:nix-community/home-manager/release-20.09";
     flake-utils.url = "github:numtide/flake-utils";
   };
@@ -15,12 +14,6 @@
       overlays = [
         (final: prev: {
           unstable = import inputs.nixpkgs-unstable {
-            system = prev.system;
-            config.allowUnfree = true;
-          };
-        })
-        (final: prev: {
-          kinnison = import inputs.nixpkgs-kinnison {
             system = prev.system;
             config.allowUnfree = true;
           };

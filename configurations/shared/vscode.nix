@@ -1,10 +1,11 @@
 { pkgs, ... }:
 let
-  base = pkgs.kinnison;
+  # Maybe change this later?
+  base = pkgs.unstable;
   package = base.vscode-with-extensions.override {
     vscodeExtensions = (with base.vscode-extensions; [
       matklad.rust-analyzer
-      ms-python.python
+      pkgs.local.vscode.ms-python.python
       ms-vscode.cpptools
       ms-vscode-remote.remote-ssh
       ms-vsliveshare.vsliveshare
