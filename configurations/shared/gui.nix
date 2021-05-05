@@ -4,7 +4,11 @@ let xdg = config.xdg;
 in {
   # First set up the main dependencies
 
-  home.packages = with pkgs; [ unstable.firefox polybar ];
+  home.packages = with pkgs; [
+    unstable.firefox
+    polybar
+    local.bins.desktop-shutdown
+  ];
 
   programs.browserpass = {
     enable = true;

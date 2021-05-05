@@ -259,7 +259,7 @@ main = do
                 -- Management keys
               , ("M-<F12>", xmonadPrompt myPromptConfig)
               , ("M-S-r", spawn "if type xmonad; then xmonad --recompile && xmonad --restart; else xmessage xmonad not in \\$PATH: \"$PATH\"; fi")
-              , ("M-C-M1-s", spawn "/home/dsilvers/bin/dmenu_shutdown")
+              , ("M-C-M1-s", spawn "desktop-shutdown")
               , ("M1-C-l", spawn "mate-screensaver-command --lock")
               ]
               `EZ.additionalKeys` extraKeyMappings mod4Mask

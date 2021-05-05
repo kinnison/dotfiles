@@ -1,0 +1,14 @@
+#!/bin/sh
+
+action=$(echo -e "Log Out\nShut Down" | rofi -dmenu -p "Select" -format i -no-custom)
+
+case "x$action" in
+    "x0")
+        mate-session-save --logout-dialog
+        ;;
+    "x1")
+        mate-session-save --shutdown-dialog
+        ;;
+    *)
+        ;;
+esac
