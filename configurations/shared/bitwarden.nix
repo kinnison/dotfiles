@@ -6,6 +6,8 @@
     pkgs.bitwarden-cli
     # And this the bwmenu tool
     local.bitwarden-rofi
+    # For bwmenu to work, we need xdotool in our session path
+    xdotool
   ];
 
   systemd.user.services.keyring-link = {
