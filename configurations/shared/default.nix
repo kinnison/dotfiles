@@ -9,6 +9,7 @@
     ./vscode.nix
     ./pass.nix
     ./irc.nix
+    ./rofi.nix
   ];
 
   home.packages = with pkgs;
