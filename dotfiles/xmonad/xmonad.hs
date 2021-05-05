@@ -156,8 +156,8 @@ launchSpeshulUnlessPresent roleTitle cmd = do
 
 launchOrRaiseEmail :: X ()
 launchOrRaiseEmail = do
-  launchSpeshulUnlessPresent "OfflineIMAP" "offlineimap"
-  launchSpeshulUnlessPresent "Mutt" "mutt"
+  --launchSpeshulUnlessPresent "OfflineIMAP" "offlineimap"
+  launchSpeshulUnlessPresent "Mutt" "neomutt"
 
 
 
