@@ -230,7 +230,7 @@ main = do
               [ -- General keys
                 ("M-x", spawn "mate-terminal")
               , ("M-M1-C-m", launchOrRaiseEmail)
-              , ("M-M1-C-d", safeSpawn "mate-control-center" ["display"])
+              , ("M-M1-C-d", safeSpawn "mate-display-properties" [])
               , ("M1-<F2>", shellPrompt myPromptConfig)
                 -- Screens, Workspaces and Windows
               , ("M1-C-<Left>", DO.moveTo Prev HiddenWS)
@@ -265,7 +265,7 @@ main = do
               `EZ.additionalKeys` extraKeyMappings mod4Mask
 
 defaultWorkSpaces :: [String]
-defaultWorkSpaces = ["mail", "irc", "www", "emacs", "term"]
+defaultWorkSpaces = ["mail", "irc", "www", "editor", "term"]
 
 extraKeyMappings :: ButtonMask -> [((ButtonMask, KeySym), X ())]
 extraKeyMappings modm =
