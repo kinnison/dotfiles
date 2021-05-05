@@ -10,6 +10,7 @@
     ./pass.nix
     ./irc.nix
     ./rofi.nix
+    ./bitwarden.nix
   ];
 
   home.packages = with pkgs;
