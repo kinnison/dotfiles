@@ -57,7 +57,10 @@ in {
       "editor.fontLigatures" = true;
       "editor.formatOnSave" = true;
       "nix.enableLanguageServer" = true;
-
+      "workbench.editorAssociations" = [{
+        "viewType" = "jupyter.notebook.ipynb";
+        "filenamePattern" = "*.ipynb";
+      }];
     };
     keybindings = [{
       key = "Enter";
