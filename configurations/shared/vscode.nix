@@ -8,7 +8,7 @@ let
       pkgs.local.vscode.ms-python.python
       ms-vscode.cpptools
       ms-vscode-remote.remote-ssh
-      ms-vsliveshare.vsliveshare
+      pkgs.local.vscode.ms-vsliveshare.vsliveshare
       jnoortheen.nix-ide
       brettm12345.nixfmt-vscode
       eamodio.gitlens

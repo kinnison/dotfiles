@@ -20,4 +20,6 @@
     name = "mspython-python-full";
     paths = [ ms-python.python-raw ms-toolsai.jupyter ];
   };
+  ms-vsliveshare.vsliveshare =
+    pkgs.unstable.callPackage ./ms-vsliveshare-vsliveshare { };
 }
