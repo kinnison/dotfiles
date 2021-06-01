@@ -1,4 +1,4 @@
-{ stdenv, fetchgit, pkgs, ... }:
+{ stdenv, fetchgit, pkgs, lib, ... }:
 
 stdenv.mkDerivation {
   name = "bitwarden-rofi";
@@ -23,7 +23,7 @@ stdenv.mkDerivation {
     sed -i -e's|jq |${pkgs.jq}/bin/jq |g' $out/bin/lib-bwmenu
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Bitwarden CLI interface using Rofi for menuing";
     homepage = "https://github.com/mattydebie/bitwarden-rofi/";
     # maintainers = [];
