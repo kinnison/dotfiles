@@ -202,9 +202,7 @@ myEventHandler h e@(ConfigureEvent {ev_window = w}) =
 myEventHandler h e = h e
 
 myPromptConfig :: XPConfig
-myPromptConfig = def { font = "xft:Inconsolata Medium-8"
-                     , height = 40
-                     }
+myPromptConfig = def
 
 mainLayout = layoutHook XMonad.Config.def
 
