@@ -15,6 +15,8 @@ let
       usernamehw.errorlens
       tamasfe.even-better-toml
       esbenp.prettier-vscode
+      haskell.haskell
+      justusadam.language-haskell
     ]) ++ base.vscode-utils.extensionsFromVscodeMarketplace [
       {
         publisher = "rubymaniac";
