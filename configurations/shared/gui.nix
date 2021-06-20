@@ -8,6 +8,7 @@ in {
     unstable.firefox
     polybar
     local.bins.desktop-shutdown
+    local.bins.neomutt-launcher
   ];
 
   programs.browserpass = {
