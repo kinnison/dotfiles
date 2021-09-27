@@ -45,6 +45,7 @@ in {
     # homedir = "${homeDirectory}/.gnupg";
     enable = true;
     settings = {
+      no-default-keyring = true;
       keyring = "managed.kbx";
       primary-keyring = "pubring.kbx";
     };
