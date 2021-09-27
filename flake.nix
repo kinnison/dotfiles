@@ -52,6 +52,13 @@
             ./configurations/mail/personal.nix
           ];
         };
+        indolence = make-home {
+          modules = [
+            ./configurations/shared
+            ./configurations/mail
+            ./configurations/mail/personal.nix
+          ];
+        };
       };
     }
     # Set up a "dev shell" that will work on all architectures
