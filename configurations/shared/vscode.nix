@@ -5,7 +5,8 @@ let
   package = base.vscode-with-extensions.override {
     vscodeExtensions = (with base.vscode-extensions; [
       matklad.rust-analyzer
-      pkgs.local.vscode.ms-python.python
+      #pkgs.local.vscode.ms-python.python
+      #ms-python.python
       ms-vscode.cpptools
       ms-vscode-remote.remote-ssh
       ms-vsliveshare.vsliveshare
