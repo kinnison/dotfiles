@@ -9,6 +9,7 @@ in {
     polybar
     local.bins.desktop-shutdown
     local.bins.neomutt-launcher
+    pavucontrol
   ];
 
   programs.browserpass = {
