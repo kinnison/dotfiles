@@ -17,6 +17,7 @@ stdenv.mkDerivation {
     sed -i -e's|jq |${pkgs.jq}/bin/jq |g' $out/bin/bwmenu
     sed -i -e's|rofi |${pkgs.rofi}/bin/rofi |g' $out/bin/bwmenu
     sed -i -e's|keyctl |${pkgs.keyutils}/bin/keyctl |g' $out/bin/bwmenu
+    sed -i -e's|# Options|${pkgs.keyutils}/bin/keyctl link @u @s|g' $out/bin/bwmenu
     sed -i -e's|xclip |${pkgs.xclip}/bin/xclip |g' $out/bin/bwmenu
     sed -i -e's|notify-send |${pkgs.libnotify}/bin/notify-send |g' $out/bin/bwmenu
 
