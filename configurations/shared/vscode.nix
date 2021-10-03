@@ -2,11 +2,12 @@
 let
   # Maybe change this later?
   base = pkgs.unstable;
+  orig-ext = pkgs.vscode-extensions;
   package = base.vscode-with-extensions.override {
     vscodeExtensions = (with base.vscode-extensions; [
       matklad.rust-analyzer
       #pkgs.local.vscode.ms-python.python
-      #ms-python.python
+      orig-ext.ms-python.python
       ms-vscode.cpptools
       ms-vscode-remote.remote-ssh
       ms-vsliveshare.vsliveshare
