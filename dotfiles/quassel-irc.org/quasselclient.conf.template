@@ -1,7 +1,10 @@
 [Buffer]
+1881\hasMessageTypeFilter=false
 __default__\ErrorMsgsTarget=1
+__default__\MessageTypeFilter=98528
 __default__\ServerNoticesTarget=2
 __default__\UserNoticesTarget=5
+__default__\hasMessageTypeFilter=true
 
 [Config]
 Version=1
