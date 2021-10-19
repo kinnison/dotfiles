@@ -8,4 +8,6 @@ with pkgs; {
 
   # Things we've packaged until they're in nixpkgs
   bitwarden-rofi = callPackage ./bitwarden-rofi.nix { };
+
+  pulseaudio-control = callPackage ./pulseaudio-control.nix { };
 }
