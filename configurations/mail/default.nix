@@ -94,44 +94,44 @@ in {
       '';
       binds = [
         {
-          map = "index";
+          map = [ "index" ];
           key = "<esc>,";
           action = "sidebar-prev";
         }
         {
-          map = "index";
+          map = [ "index" ];
           key = "<esc>.";
           action = "sidebar-next";
         }
         {
-          map = "index";
+          map = [ "index" ];
           key = "<esc><enter>";
           action = "sidebar-open";
         }
         {
-          map = "index";
+          map = [ "index" ];
           key = "<esc><return>";
           action = "sidebar-open";
         }
         {
-          map = "index";
+          map = [ "index" ];
           key = "<esc><space>";
           action = "sidebar-open";
         }
       ];
       macros = [
         {
-          map = "index";
+          map = [ "index" ];
           key = "<esc>n";
           action = "<limit>~N<enter>";
         }
         {
-          map = "index";
+          map = [ "index" ];
           key = "<esc>V";
           action = "<change-folder-readonly>${maildirBase}/mu<enter>";
         }
         {
-          map = "index";
+          map = [ "index" ];
           key = "V";
           action =
             "<change-folder-readonly>${maildirBase}/mu<enter><shell-escape>mu find --format=links --linksdir=${maildirBase}/mu --clearlinks ";
