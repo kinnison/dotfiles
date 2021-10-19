@@ -157,13 +157,13 @@ launchSpeshulUnlessPresent roleTitle cmd = do
 launchOrRaiseEmail :: X ()
 launchOrRaiseEmail = do
   --launchSpeshulUnlessPresent "OfflineIMAP" "offlineimap"
-  launchSpeshulUnlessPresent "Mutt" "neomutt-launcher"
+  launchSpeshulUnlessPresent "Neomutt" "neomutt"
 
 
 
 myManageHook =
   composeAll [ title =? "OfflineIMAP" --> doShift "mail"
-             , title =? "Mutt" --> viewShift "mail"
+             , title =? "Neomutt" --> viewShift "mail"
              , className =? "Steam" --> doFloat
              , className =? "steam" --> doFullFloat
              , isFullscreen --> doFullFloat
