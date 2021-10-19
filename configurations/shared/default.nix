@@ -11,6 +11,7 @@
     ./irc.nix
     ./rofi.nix
     ./bitwarden.nix
+    ./spotify.nix
   ];
 
   home.packages = with pkgs;
