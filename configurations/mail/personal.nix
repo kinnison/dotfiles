@@ -1,8 +1,16 @@
-{ systemConfig, config, pkgs, folder-config, ... }: {
+{ systemConfig, config, pkgs, folder-config, homeDirectory, ... }: {
   # According to Tristan, this works around https://github.com/nix-community/home-manager/issues/249
   systemd.user.services.mbsync.Service.Environment =
     "PATH=${pkgs.sops}/bin:${pkgs.gnupg}/bin";
 
+  xdg.configFile."neomutt/.personal-email-password" = {
+    executable = true;
+    text = ''
+      #!${pkgs.bash}/bin/bash
+
+      ${pkgs.pass}/bin/pass personal/mail.pepperfish.net/dsilvers@digital-scurf.org | ${pkgs.coreutils}/bin/head -1 | ${pkgs.coreutils}/bin/tr -d '\n'
+    '';
+  };
   accounts.email.accounts = {
     "home" = {
       address = "dsilvers@digital-scurf.org";
@@ -10,7 +18,7 @@
       realName = "Daniel Silverstone";
       userName = "dsilvers@digital-scurf.org";
       passwordCommand =
-        "${pkgs.pass}/bin/pass personal/mail.pepperfish.net/dsilvers@digital-scurf.org | ${pkgs.coreutils}/bin/head -1 | ${pkgs.coreutils}/bin/tr -d '\\n'";
+        "${homeDirectory}/.config/neomutt/.personal-email-password";
       imap = {
         host = "mail.pepperfish.net";
         port = 993;
