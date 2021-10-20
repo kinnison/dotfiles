@@ -45,6 +45,8 @@ in {
 
       ${pkgs.coreutils}/bin/sleep 2
 
+      export PATH="$PATH:${pkgs.local.pulseaudio-control}/bin:${pkgs.pulseaudio}/bin"
+
       exec ${pkgs.polybar}/bin/polybar -r ${systemConfig.networking.hostName}
     '';
   };
