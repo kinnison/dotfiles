@@ -45,7 +45,7 @@ in {
 
       ${pkgs.coreutils}/bin/sleep 2
 
-      export PATH="$PATH:${pkgs.local.pulseaudio-control}/bin:${pkgs.pulseaudio}/bin"
+      export PATH="$PATH:${pkgs.local.pulseaudio-control}/bin:${pkgs.pulseaudio}/bin:/run/current-system/sw/bin"
 
       exec ${pkgs.polybar}/bin/polybar -r ${systemConfig.networking.hostName}
     '';
@@ -57,8 +57,9 @@ in {
   systemd.user.services.polybar = {
     Unit = {
       Description = "Polybar";
-      After = [ "graphical-session-pre.target" ];
+      After = [ "graphical-session-pre.target" "pulseaudio.service" ];
       PartOf = [ "graphical-session.target" ];
+      Wants = [ "pulseaudio.service" ];
     };
     Service = {
       ExecStart = "${homeDirectory}/.config/polybar/.launch";
