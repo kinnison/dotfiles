@@ -134,7 +134,7 @@ cursor-scroll = ns-resize
 [module/pulseaudio-control]
 type = custom/script
 tail = true
-format-underline = ${colors.cyan}
+format-underline = #55ff88
 label-padding = 2
 label-foreground = ${colors.foreground}
 
