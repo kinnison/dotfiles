@@ -14,9 +14,10 @@
     ./spotify.nix
   ];
 
-  home.packages = with pkgs;
-    [
-      # We want Python 3 available
-      python3
-    ];
+  home.packages = with pkgs; [
+    # We want Python 3 available
+    python3
+    # We enjoy minecraft, so multimc is our best bet for a launcher
+    multimc
+  ];
 }
