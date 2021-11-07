@@ -5,7 +5,7 @@ let
   orig-ext = pkgs.vscode-extensions;
   package = base.vscode-with-extensions.override {
     vscodeExtensions = (with base.vscode-extensions; [
-      matklad.rust-analyzer
+      #matklad.rust-analyzer
       #pkgs.local.vscode.ms-python.python
       orig-ext.ms-python.python
       ms-vscode.cpptools
@@ -41,7 +41,12 @@ let
         sha256 =
           "a25976987696ead8a700bf5c0da206369bad6b8b145e52ab4cb894a4b19dd208";
       }
-
+      {
+        publisher = "matklad";
+        name = "rust-analyzer";
+        version = "0.2.801";
+        sha256 = "19lsnis5wmskpkpiyngbdpa9cpczn9mww6v5xcvlwhfjbfh63hhm";
+      }
     ];
   };
   my-vscode-package = package // { pname = base.vscode.pname; };
