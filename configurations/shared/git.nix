@@ -4,7 +4,10 @@ let
   # gpgcfg = config.programs.gpg;
   gpgcfg = { homedir = ".gnupg"; };
 in {
-  programs.gh = { enable = true; };
+  programs.gh = {
+    enable = true;
+    gitProtocol = "ssh";
+  };
 
   programs.git = {
     enable = true;
