@@ -19,5 +19,7 @@
     python3
     # We enjoy minecraft, so multimc is our best bet for a launcher
     multimc
+    # We like to do hardware design, include kicad
+    kicad
   ];
 }
