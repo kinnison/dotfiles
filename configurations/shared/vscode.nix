@@ -76,5 +76,5 @@ in {
       when = "editorTextFocus && !suggestWidgetVisible && editorLangId == rust";
     }];
   };
-  home.packages = with pkgs; [ rustup nixfmt ];
+  home.packages = with pkgs; [ rustup nixfmt nodePackages.prettier ];
 }
