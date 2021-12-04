@@ -6,7 +6,7 @@ let
 in {
   programs.gh = {
     enable = true;
-    gitProtocol = "ssh";
+    git_protocol = "ssh";
   };
 
   programs.git = {
