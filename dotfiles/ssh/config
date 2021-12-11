@@ -9,4 +9,6 @@ GSSAPIAuthentication no
 
 Host *
 	UseRoaming no
-
+	# Remove the following when I no longer need to connect to a variety of dodgy old hosts
+	HostKeyAlgorithms +ssh-rsa
+	PubkeyAcceptedAlgorithms +ssh-rsa
