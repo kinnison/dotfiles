@@ -24,28 +24,25 @@ let
         publisher = "rubymaniac";
         name = "vscode-direnv";
         version = "0.0.2";
-        sha256 =
-          "4d5be329d297784c699f2521f9f0cf97e79276543387b96df3149fc35620b4be";
+        sha256 = "sha256-TVvjKdKXeExpnyUh+fDPl+eSdlQzh7lt8xSfw1YgtL4=";
       }
       {
         publisher = "serayuzgur";
         name = "crates";
-        version = "0.5.9";
-        sha256 =
-          "60721b9e5d91ee5ab02478bca94408982971f4c5a6fb93dcd76bd8c3b7bf4650";
+        version = "0.5.10";
+        sha256 = "sha256-bY/dphiEPPgTg1zMjvxx4b0Ska2XggRucnZxtbppcLU=";
       }
       {
         publisher = "karunamurti";
         name = "tera";
-        version = "0.0.6";
-        sha256 =
-          "a25976987696ead8a700bf5c0da206369bad6b8b145e52ab4cb894a4b19dd208";
+        version = "0.0.9";
+        sha256 = "sha256-e72lZXg//vCZwoggRrpJlYiNUMxID3rkDLLBtV1b098=";
       }
       {
         publisher = "matklad";
         name = "rust-analyzer";
-        version = "0.2.801";
-        sha256 = "19lsnis5wmskpkpiyngbdpa9cpczn9mww6v5xcvlwhfjbfh63hhm";
+        version = "0.2.853";
+        sha256 = "sha256-HYq8PuzchMwx0wd3SInitGzhNQe2biw2Njl+xdNuWjk=";
       }
     ];
   };
