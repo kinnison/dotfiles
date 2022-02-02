@@ -10,4 +10,5 @@ with pkgs; {
   bitwarden-rofi = callPackage ./bitwarden-rofi.nix { };
 
   pulseaudio-control = callPackage ./pulseaudio-control.nix { };
+  obs-streamfx = libsForQt5.callPackage ./obs-streamfx { };
 }

@@ -1,0 +1,51 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index ae46d31..4ccaa5d 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -272,12 +272,15 @@ endif()
+ ################################################################################
+ 
+ set(STANDALONE ON)
++set(BODGED OFF)
+ if(GROUPED AND (TARGET libobs))
+ 	set(STANDALONE OFF)
+ endif()
+ if(STANDALONE)
+ 	message(STATUS "${LOGPREFIX} This is a standalone build, please make sure you've followed the instructions.")
++	message(STATUS "${LOGPREFIX} This standalone build is cheating and feels native.")
+ 	set(${PREFIX}OBS_NATIVE OFF)
++	set(BODGED ON)
+ else()
+ 	message(STATUS "${LOGPREFIX} This is a combined build.")
+ 	set(${PREFIX}OBS_NATIVE ON)
+@@ -382,7 +385,7 @@ endif()
+ # Standalone Build: OBS Studio
+ ################################################################################
+ 
+-if(NOT ${PREFIX}OBS_NATIVE)
++if((NOT ${PREFIX}OBS_NATIVE) AND (NOT BODGED))
+ 	# Options
+ 	set(${PREFIX}DOWNLOAD_OBS_URL "" CACHE STRING "(Optional) URL of prebuilt libOBS archive to download.")
+ 	set(${PREFIX}DOWNLOAD_OBS_HASH "" CACHE STRING "(Optional) The hash for the libOBS archive.")
+@@ -454,6 +457,10 @@ if(NOT ${PREFIX}OBS_NATIVE)
+ 	include("${libobs_SOURCE_DIR}/cmake/LibObs/LibObsConfig.cmake")
+ endif()
+ 
++if(BODGED)
++	include("${libobs_SOURCE_DIR}/lib/cmake/LibObs/LibObsConfig.cmake")
++endif()
++
+ ################################################################################
+ # Standalone Build: OBS Studio Dependencies
+ ################################################################################
+@@ -984,8 +991,8 @@ if(REQUIRE_OBSFE)
+ 			set(HAVE_OBSFE ON)
+ 		endif()
+ 	else()
+-		if (EXISTS "${libobs_SOURCE_DIR}/cmake/obs-frontend-api/obs-frontend-apiConfig.cmake")
+-			include("${libobs_SOURCE_DIR}/cmake/obs-frontend-api/obs-frontend-apiConfig.cmake")
++		if (EXISTS "${libobs_SOURCE_DIR}/lib/cmake/obs-frontend-api/obs-frontend-apiConfig.cmake")
++			include("${libobs_SOURCE_DIR}/lib/cmake/obs-frontend-api/obs-frontend-apiConfig.cmake")
+ 			set(HAVE_OBSFE ON)
+ 		endif()
+ 	endif()
