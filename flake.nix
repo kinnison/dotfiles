@@ -57,6 +57,7 @@
             ./configurations/shared
             ./configurations/mail
             ./configurations/mail/personal.nix
+            ./configurations/streaming.nix
           ];
         };
       };
