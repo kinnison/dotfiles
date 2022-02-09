@@ -25,6 +25,9 @@ let
     set mark_old = no
     set wait_key = no
     set strict_threads = yes
+    auto_view 'text/html'
+    alternative_order text/calendar text/enriched text/plain text/html text application/postscript image/*
+    set mailcap_path = "${config.xdg.configHome}/neomutt/mailcap:$mailcap_path"
   '';
   muttColours = ''
     color index brightwhite default .
@@ -173,6 +176,13 @@ in {
           ${pkgs.coreutils}/bin/ln -sf /dev/null "$target"
         done
       '';
+  };
+
+  config.xdg.configFile."neomutt/mailcap" = {
+    executable = false;
+    text = ''
+      text/html; ${pkgs.w3m}/bin/w3m -I %{charset} -dump -T text/html '%s'; copiousoutput; description=HTML Text; nametemplate=%s.html
+    '';
   };
 
   # We use msmtpq to send email, which means if we save the mail offline we
