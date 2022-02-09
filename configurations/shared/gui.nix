@@ -110,6 +110,7 @@ in {
     settings."org/mate/desktop/peripherals/mouse" = {
       cursor-size = 24;
       cursor-theme = "mate";
+      middle-button-enabled = false;
     };
   };
 }
