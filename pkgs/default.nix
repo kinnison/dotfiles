@@ -11,4 +11,5 @@ with pkgs; {
 
   pulseaudio-control = callPackage ./pulseaudio-control.nix { };
   obs-streamfx = libsForQt5.callPackage ./obs-streamfx { };
+  obs-face-tracker = libsForQt5.callPackage ./obs-face-tracker { };
 }
