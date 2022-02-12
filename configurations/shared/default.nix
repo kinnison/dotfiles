@@ -19,5 +19,6 @@
     python3
     # We like to do hardware design, include kicad
     kicad
+    unstable.minecraft
   ];
 }
