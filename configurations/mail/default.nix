@@ -182,6 +182,8 @@ in {
     executable = false;
     text = ''
       text/html; ${pkgs.w3m}/bin/w3m -I %{charset} -dump -T text/html '%s'; copiousoutput; description=HTML Text; nametemplate=%s.html
+      image/jpeg; ${pkgs.qiv}/bin/qiv -t '%s'; test=test "$DISPLAY"
+      image/png; ${pkgs.qiv}/bin/qiv -t '%s'; test=test "$DISPLAY"
     '';
   };
 
