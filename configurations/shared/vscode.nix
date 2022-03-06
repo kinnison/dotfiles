@@ -10,6 +10,7 @@ let
       orig-ext.ms-python.python
       ms-vscode.cpptools
       ms-vscode-remote.remote-ssh
+      ms-azuretools.vscode-docker
       ms-vsliveshare.vsliveshare
       jnoortheen.nix-ide
       brettm12345.nixfmt-vscode
@@ -19,6 +20,7 @@ let
       esbenp.prettier-vscode
       haskell.haskell
       justusadam.language-haskell
+      zxh404.vscode-proto3
     ]) ++ base.vscode-utils.extensionsFromVscodeMarketplace [
       {
         publisher = "rubymaniac";
@@ -43,6 +45,12 @@ let
         name = "rust-analyzer";
         version = "0.2.853";
         sha256 = "sha256-HYq8PuzchMwx0wd3SInitGzhNQe2biw2Njl+xdNuWjk=";
+      }
+      {
+        publisher = "ms-vscode-remote";
+        name = "remote-containers";
+        version = "0.217.4";
+        sha256 = "sha256-YYoFdqrJLdq8uhx3cKA6nvxCa9Ac4jVxp9dOo4wF5cQ=";
       }
     ];
   };
