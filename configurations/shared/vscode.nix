@@ -52,6 +52,30 @@ let
         version = "0.217.4";
         sha256 = "sha256-YYoFdqrJLdq8uhx3cKA6nvxCa9Ac4jVxp9dOo4wF5cQ=";
       }
+      {
+        publisher = "dendron";
+        name = "dendron";
+        version = "0.85.0";
+        sha256 = "sha256-SErDZCkS8F3LB1k8T4GmMVgqEF1bAyhDB8/5Kuc0OLs=";
+      }
+      {
+        publisher = "dendron";
+        name = "dendron-paste-image";
+        version = "1.1.0";
+        sha256 = "sha256-dhyTYsSVg3nXFdApTwRDC2ge5LYwVaX58uj5uJwoWqc=";
+      }
+      {
+        publisher = "dendron";
+        name = "dendron-markdown-shortcuts";
+        version = "0.12.1";
+        sha256 = "sha256-Kmjm1xQvrt228XNSRkLUu6Yu3Oec4csJhi74zjsh3HY=";
+      }
+      {
+        publisher = "redhat";
+        name = "vscode-yaml";
+        version = "1.5.1";
+        sha256 = "sha256-JXhmgBFZdKNjgX6K7U+M/T7HEmIOBQOzQEJ5957TUuM=";
+      }
     ];
   };
   my-vscode-package = package // { pname = base.vscode.pname; };
@@ -74,6 +98,7 @@ in {
       "workbench.editorAssociations" = {
         "*.ipynb" = "jupyter.notebook.ipynb";
       };
+      "redhat.telemetry.enabled" = false;
     };
     keybindings = [{
       key = "Enter";
