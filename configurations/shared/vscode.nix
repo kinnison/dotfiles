@@ -43,8 +43,8 @@ let
       {
         publisher = "matklad";
         name = "rust-analyzer";
-        version = "0.2.853";
-        sha256 = "sha256-HYq8PuzchMwx0wd3SInitGzhNQe2biw2Njl+xdNuWjk=";
+        version = "0.3.1005";
+        sha256 = "sha256-YG8WRxiNAI7R64rL1AsLRtaRODguWoCux5eKy1ZsVv4=";
       }
       {
         publisher = "ms-vscode-remote";
@@ -55,8 +55,8 @@ let
       {
         publisher = "dendron";
         name = "dendron";
-        version = "0.85.0";
-        sha256 = "sha256-SErDZCkS8F3LB1k8T4GmMVgqEF1bAyhDB8/5Kuc0OLs=";
+        version = "0.89.0";
+        sha256 = "sha256-mXbKHm0DBBcsTVMRLJkhs9zZ1r29/4xLN5FJbGzLtsI=";
       }
       {
         publisher = "dendron";
