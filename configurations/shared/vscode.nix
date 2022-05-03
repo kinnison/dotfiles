@@ -1,12 +1,11 @@
 { pkgs, ... }:
 let
+  r-a-package = pkgs.unstable.rust-analyzer-unwrapped;
   # Maybe change this later?
   base = pkgs.unstable;
   orig-ext = pkgs.vscode-extensions;
   package = base.vscode-with-extensions.override {
     vscodeExtensions = (with base.vscode-extensions; [
-      #matklad.rust-analyzer
-      #pkgs.local.vscode.ms-python.python
       orig-ext.ms-python.python
       ms-vscode.cpptools
       ms-vscode-remote.remote-ssh
@@ -43,20 +42,22 @@ let
       {
         publisher = "matklad";
         name = "rust-analyzer";
-        version = "0.3.1005";
-        sha256 = "sha256-YG8WRxiNAI7R64rL1AsLRtaRODguWoCux5eKy1ZsVv4=";
+        #version = "0.3.1005";
+        #sha256 = "sha256-YG8WRxiNAI7R64rL1AsLRtaRODguWoCux5eKy1ZsVv4=";
+        version = "0.3.1014";
+        sha256 = "sha256-vjglTFu6cWbkpfHfh1G7OEG82WRC7xWslN/DgIoAGwc=";
       }
       {
         publisher = "ms-vscode-remote";
         name = "remote-containers";
-        version = "0.217.4";
-        sha256 = "sha256-YYoFdqrJLdq8uhx3cKA6nvxCa9Ac4jVxp9dOo4wF5cQ=";
+        version = "0.232.6";
+        sha256 = "sha256-LoO2YATrqwpxFX/4VpsBbVgsmYjFELNKAnQV0UcBico=";
       }
       {
         publisher = "dendron";
         name = "dendron";
-        version = "0.89.0";
-        sha256 = "sha256-mXbKHm0DBBcsTVMRLJkhs9zZ1r29/4xLN5FJbGzLtsI=";
+        version = "0.90.0";
+        sha256 = "sha256-UOBbXPH1YwWpYjHamutyguPIYB7BBRSB2RjGOeS8pLI=";
       }
       {
         publisher = "dendron";
@@ -73,8 +74,8 @@ let
       {
         publisher = "redhat";
         name = "vscode-yaml";
-        version = "1.5.1";
-        sha256 = "sha256-JXhmgBFZdKNjgX6K7U+M/T7HEmIOBQOzQEJ5957TUuM=";
+        version = "1.6.0";
+        sha256 = "sha256-OHzZl3G4laob7E3cgvZJ2EcuPGBf3CfEZ8/4SYNnfog=";
       }
     ];
   };
@@ -99,6 +100,7 @@ in {
         "*.ipynb" = "jupyter.notebook.ipynb";
       };
       "redhat.telemetry.enabled" = false;
+      "rust-analyzer.server.path" = "${r-a-package}/bin/rust-analyzer";
     };
     keybindings = [{
       key = "Enter";
@@ -106,5 +108,6 @@ in {
       when = "editorTextFocus && !suggestWidgetVisible && editorLangId == rust";
     }];
   };
-  home.packages = with pkgs; [ rustup nixfmt nodePackages.prettier ];
+  home.packages = with pkgs;
+    [ rustup nixfmt nodePackages.prettier ] ++ [ r-a-package ];
 }
