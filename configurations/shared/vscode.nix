@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  r-a-package = pkgs.unstable.rust-analyzer-unwrapped;
+  r-a-package = pkgs.local.rust-analyzer-unwrapped;
   # Maybe change this later?
   base = pkgs.unstable;
   orig-ext = pkgs.vscode-extensions;

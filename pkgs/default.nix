@@ -12,4 +12,9 @@ with pkgs; {
   pulseaudio-control = callPackage ./pulseaudio-control.nix { };
   obs-streamfx = libsForQt5.callPackage ./obs-streamfx { };
   obs-face-tracker = libsForQt5.callPackage ./obs-face-tracker { };
+
+  rust-analyzer-unwrapped = callPackage ./rust-analyzer {
+    inherit (darwin.apple_sdk.frameworks) CoreServices;
+    inherit (pkgs.unstable) rustPlatform;
+  };
 }
