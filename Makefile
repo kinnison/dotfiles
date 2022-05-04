@@ -7,4 +7,4 @@ help:
 	@echo "rebuild-switch -- Runs nixos-rebuild switch with requisite args"
 
 rebuild-switch:
-	sudo nixos-rebuild --override-input dotfiles $$(pwd) -v switch -L
+	sudo nixos-rebuild --override-input dotfiles $$(pwd) -v switch -L -k
