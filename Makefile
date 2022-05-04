@@ -7,4 +7,5 @@ help:
 	@echo "rebuild-switch -- Runs nixos-rebuild switch with requisite args"
 
 rebuild-switch:
-	sudo nixos-rebuild --override-input dotfiles $$(pwd) -v switch -L -k
+	sudo env NIX_CURL_FLAGS="--user-agent Mozilla/5.0" nixos-rebuild --override-input dotfiles $$(pwd) -v switch -L --keep-going
+
