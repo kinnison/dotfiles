@@ -42,10 +42,8 @@ let
       {
         publisher = "matklad";
         name = "rust-analyzer";
-        #version = "0.3.1005";
-        #sha256 = "sha256-YG8WRxiNAI7R64rL1AsLRtaRODguWoCux5eKy1ZsVv4=";
-        version = "0.3.1014";
-        sha256 = "sha256-vjglTFu6cWbkpfHfh1G7OEG82WRC7xWslN/DgIoAGwc=";
+        version = "0.3.1041";
+        sha256 = "sha256-QKwlxenBd4lW70Y7LjVYgqnxDatIprNPadq++MolmMY=";
       }
       {
         publisher = "ms-vscode-remote";
