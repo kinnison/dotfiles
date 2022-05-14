@@ -20,6 +20,7 @@ let
       haskell.haskell
       justusadam.language-haskell
       zxh404.vscode-proto3
+      vadimcn.vscode-lldb
     ]) ++ base.vscode-utils.extensionsFromVscodeMarketplace [
       {
         publisher = "rubymaniac";
@@ -40,10 +41,10 @@ let
         sha256 = "sha256-e72lZXg//vCZwoggRrpJlYiNUMxID3rkDLLBtV1b098=";
       }
       {
-        publisher = "matklad";
+        publisher = "rust-lang";
         name = "rust-analyzer";
-        version = "0.3.1041";
-        sha256 = "sha256-QKwlxenBd4lW70Y7LjVYgqnxDatIprNPadq++MolmMY=";
+        version = "0.3.1053";
+        sha256 = "sha256-MKo+VlkqUc+ySbb5P4O9A4xUvUL4V/eXFP2Z7o19boM=";
       }
       {
         publisher = "ms-vscode-remote";
@@ -75,6 +76,12 @@ let
         version = "1.6.0";
         sha256 = "sha256-OHzZl3G4laob7E3cgvZJ2EcuPGBf3CfEZ8/4SYNnfog=";
       }
+      # {
+      #   publisher = "vadimcn";
+      #   name = "vscode-lldb";
+      #   version = "1.7.0";
+      #   sha256 = "sha256-DuYweIri8NpBHcIG37WyUUc+p4/TaBBHcI6x6YIRvmk=";
+      # }
     ];
   };
   my-vscode-package = package // { pname = base.vscode.pname; };
