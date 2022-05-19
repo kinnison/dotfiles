@@ -92,8 +92,12 @@ in {
     userSettings = {
       "update.mode" = "none";
       "rust-analyzer.checkOnSave.command" = "clippy";
-      "rust-analyzer.lens.methodReferences" = true;
-      "rust-analyzer.lens.references" = true;
+      "rust-analyzer.hover.actions.references.enable" = true;
+      "rust-analyzer.inlayHints.closureReturnTypeHints.enable" = true;
+      "rust-analyzer.inlayHints.lifetimeElisionHints.enable" = "skip_trivial";
+      "rust-analyzer.lens.references.adt.enable" = true;
+      "rust-analyzer.lens.references.method.enable" = true;
+      "rust-analyzer.lens.references.trait.enable" = true;
       "window.menuBarVisibility" = "toggle";
       "editor.minimap.enabled" = false;
       "editor.fontFamily" =
@@ -101,9 +105,7 @@ in {
       "editor.fontLigatures" = true;
       "editor.formatOnSave" = true;
       "nix.enableLanguageServer" = true;
-      "workbench.editorAssociations" = {
-        "*.ipynb" = "jupyter.notebook.ipynb";
-      };
+      "workbench.editorAssociations" = { "*.ipynb" = "jupyter-notebook"; };
       "redhat.telemetry.enabled" = false;
       "rust-analyzer.server.path" = "${r-a-package}/bin/rust-analyzer";
     };
