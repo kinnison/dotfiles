@@ -43,8 +43,8 @@ let
       {
         publisher = "rust-lang";
         name = "rust-analyzer";
-        version = "0.4.1092";
-        sha256 = "sha256-U6gbQIZytmheW7Ze8w2azLcQLm5U31HT/kRE86GXUbg=";
+        version = "0.4.1096";
+        sha256 = "sha256-H/jTA3oXsBaO/kUuNOJGufhwW6NIWuu8gHZF5347AtA=";
       }
       {
         publisher = "ms-vscode-remote";
@@ -91,13 +91,19 @@ in {
     package = my-vscode-package;
     userSettings = {
       "update.mode" = "none";
+      "rust-analyzer.server.path" = "${r-a-package}/bin/rust-analyzer";
       "rust-analyzer.checkOnSave.command" = "clippy";
       "rust-analyzer.hover.actions.references.enable" = true;
-      "rust-analyzer.inlayHints.closureReturnTypeHints.enable" = true;
+      "rust-analyzer.inlayHints.closureReturnTypeHints.enable" = "with_block";
       "rust-analyzer.inlayHints.lifetimeElisionHints.enable" = "skip_trivial";
       "rust-analyzer.lens.references.adt.enable" = true;
       "rust-analyzer.lens.references.method.enable" = true;
       "rust-analyzer.lens.references.trait.enable" = true;
+      "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames" = true;
+      "rust-analyzer.inlayHints.typeHints.hideClosureInitialization" = true;
+      "rust-analyzer.inlayHints.typeHints.hideNamedConstructor" = true;
+      "rust-analyzer.lru.capacity" = 512;
+      "rust-analyzer.typing.autoClosingAngleBrackets.enable" = true;
       "window.menuBarVisibility" = "toggle";
       "editor.minimap.enabled" = false;
       "editor.fontFamily" =
@@ -107,7 +113,6 @@ in {
       "nix.enableLanguageServer" = true;
       "workbench.editorAssociations" = { "*.ipynb" = "jupyter-notebook"; };
       "redhat.telemetry.enabled" = false;
-      "rust-analyzer.server.path" = "${r-a-package}/bin/rust-analyzer";
     };
     keybindings = [{
       key = "Enter";
