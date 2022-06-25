@@ -43,8 +43,8 @@ let
       {
         publisher = "rust-lang";
         name = "rust-analyzer";
-        version = "0.4.1096";
-        sha256 = "sha256-H/jTA3oXsBaO/kUuNOJGufhwW6NIWuu8gHZF5347AtA=";
+        version = "0.4.1104";
+        sha256 = "sha256-eAWqLQhCRMa1OA/FSGsb2xBTXunUv6RK5kQYVGmlSNg=";
       }
       {
         publisher = "ms-vscode-remote";
@@ -55,8 +55,8 @@ let
       {
         publisher = "dendron";
         name = "dendron";
-        version = "0.90.0";
-        sha256 = "sha256-UOBbXPH1YwWpYjHamutyguPIYB7BBRSB2RjGOeS8pLI=";
+        version = "0.100.1";
+        sha256 = "sha256-pBs9VukqCuzzcMcnP2D0eIQtioxYef5dpXYrJrpFU7A=";
       }
       {
         publisher = "dendron";
@@ -73,8 +73,8 @@ let
       {
         publisher = "redhat";
         name = "vscode-yaml";
-        version = "1.6.0";
-        sha256 = "sha256-OHzZl3G4laob7E3cgvZJ2EcuPGBf3CfEZ8/4SYNnfog=";
+        version = "1.8.0";
+        sha256 = "sha256-GwdpuZjFGbffa+G0U7xOQuChPmQ5S5x9fDRnZ3slTbY=";
       }
       # {
       #   publisher = "vadimcn";
@@ -121,5 +121,5 @@ in {
     }];
   };
   home.packages = with pkgs;
-    [ rustup nixfmt nodePackages.prettier ] ++ [ r-a-package ];
+    [ unstable.rustup nixfmt nodePackages.prettier ] ++ [ r-a-package ];
 }
