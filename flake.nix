@@ -11,9 +11,10 @@
   outputs = inputs:
     let
       nixpkgs = inputs.nixpkgs;
+      unstable = inputs.nixpkgs-unstable;
       overlays = [
         (final: prev: {
-          unstable = import inputs.nixpkgs-unstable {
+          unstable = import unstable {
             system = prev.system;
             config.allowUnfree = true;
           };
@@ -25,6 +26,14 @@
         systemConfig: {
           nixpkgs.config.allowUnfree = true;
           nixpkgs.overlays = overlays;
+
+          nix.registry.nixpkgs = {
+            from = {
+              id = "nixpkgs";
+              type = "indirect";
+            };
+            flake = unstable;
+          };
 
           imports = [
             ({ ... }: {
