@@ -44,20 +44,20 @@ let
       {
         publisher = "rust-lang";
         name = "rust-analyzer";
-        version = "0.4.1112";
-        sha256 = "sha256-3f5h7TQkUlL/0pZEsq7urUQKeoUWc1pv3rPTYlUuXYc=";
+        version = "0.4.1128";
+        sha256 = "sha256-f46Zfky67X3o9UVFTpXacIu/GzSSym0dTrfu6DDQ1RU=";
       }
       {
         publisher = "ms-vscode-remote";
         name = "remote-containers";
-        version = "0.232.6";
-        sha256 = "sha256-LoO2YATrqwpxFX/4VpsBbVgsmYjFELNKAnQV0UcBico=";
+        version = "0.242.0";
+        sha256 = "sha256-cLHa0E0izNu2QYQBQ0qUlCIXsJmvc7Q6kgR6F3hnMX8=";
       }
       {
         publisher = "dendron";
         name = "dendron";
-        version = "0.100.1";
-        sha256 = "sha256-pBs9VukqCuzzcMcnP2D0eIQtioxYef5dpXYrJrpFU7A=";
+        version = "0.103.0";
+        sha256 = "sha256-pJ3aZ5Yh/pIBWiHHs1V4JxdYxK+f17xRvPR+DXfHgVM=";
       }
       {
         publisher = "dendron";
@@ -74,8 +74,8 @@ let
       {
         publisher = "redhat";
         name = "vscode-yaml";
-        version = "1.8.0";
-        sha256 = "sha256-GwdpuZjFGbffa+G0U7xOQuChPmQ5S5x9fDRnZ3slTbY=";
+        version = "1.9.1";
+        sha256 = "sha256-XFg6L+DYhq7cmbnYPkRaZJK5zPTp4yeQR24fCpUGp4I=";
       }
       # {
       #   publisher = "vadimcn";
