@@ -1,6 +1,7 @@
 { pkgs, ... }:
 let
-  r-a-package = pkgs.local.rust-analyzer-unwrapped;
+  #r-a-package = pkgs.local.rust-analyzer-unwrapped;
+  r-a-package = pkgs.unstable.rust-analyzer-unwrapped;
   rustup-package = pkgs.local.rustup;
   # Maybe change this later?
   base = pkgs.unstable;
