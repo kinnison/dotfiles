@@ -17,4 +17,9 @@ with pkgs; {
     inherit (darwin.apple_sdk.frameworks) CoreServices;
     inherit (pkgs.unstable) rustPlatform;
   };
+
+  rustup = callPackage ./rustup {
+    inherit (darwin.apple_sdk.frameworks) CoreServices Security;
+    inherit (pkgs.unstable) rustPlatform;
+  };
 }

@@ -1,6 +1,7 @@
 { pkgs, ... }:
 let
   r-a-package = pkgs.local.rust-analyzer-unwrapped;
+  rustup-package = pkgs.local.rustup;
   # Maybe change this later?
   base = pkgs.unstable;
   orig-ext = pkgs.vscode-extensions;
@@ -121,5 +122,5 @@ in {
     }];
   };
   home.packages = with pkgs;
-    [ unstable.rustup nixfmt nodePackages.prettier ] ++ [ r-a-package ];
+    [ rustup-package nixfmt nodePackages.prettier ] ++ [ r-a-package ];
 }
