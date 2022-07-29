@@ -22,4 +22,6 @@ with pkgs; {
     inherit (darwin.apple_sdk.frameworks) CoreServices Security;
     inherit (pkgs.unstable) rustPlatform;
   };
+
+  sudoku-solver = callPackage ./sudoku-solver.nix { };
 }
