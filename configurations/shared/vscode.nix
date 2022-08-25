@@ -2,7 +2,7 @@
 let
   #r-a-package = pkgs.local.rust-analyzer-unwrapped;
   r-a-package = pkgs.unstable.rust-analyzer-unwrapped;
-  rustup-package = pkgs.local.rustup;
+  rustup-package = pkgs.unstable.rustup;
   # Maybe change this later?
   base = pkgs.unstable;
   orig-ext = pkgs.vscode-extensions;
@@ -45,8 +45,8 @@ let
       {
         publisher = "rust-lang";
         name = "rust-analyzer";
-        version = "0.4.1144";
-        sha256 = "sha256-Mye/NXj1hxuGohWBmbULFQxgSrk62Z3i1wQJpY0QIuk=";
+        version = "0.4.1180";
+        sha256 = "sha256-Og7TKhhqmOFqU5YBzvLNF9aBBJod/0Sbawh4UwtlBwo=";
       }
       {
         publisher = "ms-vscode-remote";
