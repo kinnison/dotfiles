@@ -75,6 +75,7 @@
             ./configurations/shared
             ./configurations/mail
             ./configurations/mail/personal.nix
+            ./configurations/sudoku.nix
           ];
         };
       };
