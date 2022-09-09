@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
-  #r-a-package = pkgs.local.rust-analyzer-unwrapped;
-  r-a-package = pkgs.unstable.rust-analyzer-unwrapped;
+  r-a-package = pkgs.local.rust-analyzer-unwrapped;
+  #r-a-package = pkgs.unstable.rust-analyzer-unwrapped;
   rustup-package = pkgs.unstable.rustup;
   # Maybe change this later?
   base = pkgs.unstable;
@@ -45,8 +45,8 @@ let
       {
         publisher = "rust-lang";
         name = "rust-analyzer";
-        version = "0.4.1180";
-        sha256 = "sha256-Og7TKhhqmOFqU5YBzvLNF9aBBJod/0Sbawh4UwtlBwo=";
+        version = "0.4.1190";
+        sha256 = "sha256-IE9a9a34YpQ4VB0YKann7WYkF41T/wU2T0zTyiX1VMw=";
       }
       {
         publisher = "ms-vscode-remote";

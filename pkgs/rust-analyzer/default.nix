@@ -1,5 +1,6 @@
 { lib
 , stdenv
+, callPackage
 , fetchFromGitHub
 , rustPlatform
 , CoreServices
@@ -11,23 +12,22 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "rust-analyzer-unwrapped";
-  version = "2022-07-11";
-  cargoSha256 = "sha256-XpLXx3f+BC8+O4Df/PJ4LWuLxX14e/ga+aFu/JxVdpg=";
+  version = "2022-08-29";
+  cargoSha256 = "sha256-AWY9pT8CklT6MMv89HpHYexPZcoPi2bT1ZS2NbSHEsg=";
 
   src = fetchFromGitHub {
     owner = "rust-lang";
     repo = "rust-analyzer";
     rev = version;
-    sha256 = "sha256-HU1+Rql35ouZe0lx1ftCMDDwC9lqN3COudvMe+8XIx0=";
+    sha256 = "sha256-HBB6f+lGYGaMku/TyVMcEFSID1KKRS3tVVIqnddVWjQ=";
   };
 
-  patches = [
-    # Code format and git history check require more dependencies but don't really matter for packaging.
-    # So just ignore them.
-    ./ignore-git-and-rustfmt-tests.patch
-  ];
+  cargoBuildFlags = [ "--bin" "rust-analyzer" "--bin" "rust-analyzer-proc-macro-srv" ];
+  cargoTestFlags = [ "--package" "rust-analyzer" "--package" "proc-macro-srv-cli" ];
 
-  buildAndTestSubdir = "crates/rust-analyzer";
+  # Code format check requires more dependencies but don't really matter for packaging.
+  # So just ignore it.
+  checkFlags = ["--skip=tidy::check_code_formatting"];
 
   nativeBuildInputs = lib.optional useMimalloc cmake;
 
@@ -38,7 +38,7 @@ rustPlatform.buildRustPackage rec {
 
   buildFeatures = lib.optional useMimalloc "mimalloc";
 
-  RUST_ANALYZER_REV = version;
+  CFG_RELEASE = version;
 
   inherit doCheck;
   preCheck = lib.optionalString doCheck ''
@@ -50,16 +50,21 @@ rustPlatform.buildRustPackage rec {
     runHook preInstallCheck
     versionOutput="$($out/bin/rust-analyzer --version)"
     echo "'rust-analyzer --version' returns: $versionOutput"
-    #[[ "$versionOutput" == "rust-analyzer ${version}" ]]
+    [[ "$versionOutput" == "rust-analyzer ${version}" ]]
     runHook postInstallCheck
   '';
 
-  passthru.updateScript = ./update.sh;
+  passthru = {
+    updateScript = ./update.sh;
+    # FIXME: Pass overrided `rust-analyzer` once `buildRustPackage` also implements #119942
+    tests.neovim-lsp = callPackage ./test-neovim-lsp.nix { };
+  };
 
   meta = with lib; {
     description = "A modular compiler frontend for the Rust language";
     homepage = "https://rust-analyzer.github.io";
     license = with licenses; [ mit asl20 ];
     maintainers = with maintainers; [ oxalica ];
+    mainProgram = "rust-analyzer";
   };
 }
