@@ -4,13 +4,17 @@ let xdg = config.xdg;
 in {
   # First set up the main dependencies
 
-  home.packages = with pkgs; [
-    unstable.firefox
-    polybar
-    local.bins.desktop-shutdown
-    local.pulseaudio-control
-    pavucontrol
-  ];
+  home.packages = with pkgs;
+    [
+      unstable.firefox
+      polybar
+      local.bins.desktop-shutdown
+      local.pulseaudio-control
+      pavucontrol
+    ] ++ (if systemConfig.networking.hostName == "cataplexy" then
+      [ pkgs.blueman ]
+    else
+      [ ]);
 
   programs.browserpass = {
     enable = true;
