@@ -20,7 +20,10 @@
     python3
     # We enjoy minecraft, so multimc is our best bet for a launcher
     #(multimc.override { inherit msaClientID; })
-    polymc
+    # But they were arses, so polymc
+    #polymc
+    # But they were bigger arses, so prismlauncher
+    prismlauncher
     # We like to do hardware design, include kicad
     kicad
   ];
