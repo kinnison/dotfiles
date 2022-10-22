@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
-  r-a-package = pkgs.local.rust-analyzer-unwrapped;
-  #r-a-package = pkgs.unstable.rust-analyzer-unwrapped;
+  #r-a-package = pkgs.local.rust-analyzer-unwrapped;
+  r-a-package = pkgs.unstable.rust-analyzer-unwrapped;
   rustup-package = pkgs.unstable.rustup;
   # Maybe change this later?
   base = pkgs.unstable;
@@ -45,8 +45,8 @@ let
       {
         publisher = "rust-lang";
         name = "rust-analyzer";
-        version = "0.4.1198";
-        sha256 = "sha256-vKCMO3xKLvB+uLizHSZ1GdUjvyKTmRNvHO9DXPpfk7o=";
+        version = "0.4.1255";
+        sha256 = "sha256-iJn7BeUGVR0YhxFn3dwSVBONLvzFjVvhAQniv56dQQY=";
       }
       {
         publisher = "ms-vscode-remote";
@@ -57,14 +57,14 @@ let
       {
         publisher = "dendron";
         name = "dendron";
-        version = "0.103.0";
-        sha256 = "sha256-pJ3aZ5Yh/pIBWiHHs1V4JxdYxK+f17xRvPR+DXfHgVM=";
+        version = "0.115.1";
+        sha256 = "sha256-4fQRb2ubSrUtVFD2mVdrP/1dWTdYJ6anmXDKtCKglOc=";
       }
       {
         publisher = "dendron";
         name = "dendron-paste-image";
-        version = "1.1.0";
-        sha256 = "sha256-dhyTYsSVg3nXFdApTwRDC2ge5LYwVaX58uj5uJwoWqc=";
+        version = "1.1.1";
+        sha256 = "sha256-SlW8MEWBgf8cJsdSzeegqPiAlEvlnrxuvrJJdhHwq2E=";
       }
       {
         publisher = "dendron";
@@ -75,8 +75,8 @@ let
       {
         publisher = "redhat";
         name = "vscode-yaml";
-        version = "1.9.1";
-        sha256 = "sha256-XFg6L+DYhq7cmbnYPkRaZJK5zPTp4yeQR24fCpUGp4I=";
+        version = "1.11.10112022";
+        sha256 = "sha256-/ZD3LOf6d5dJJW7eGZgkrf4hj1CXZJNI0u06Bnmyo0Q=";
       }
       # {
       #   publisher = "vadimcn";
