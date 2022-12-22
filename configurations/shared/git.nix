@@ -35,7 +35,8 @@ in {
         [ "git://github.com/" "https://github.com/" ];
       url."ssh://git@gitlab.com/".pushInsteadOf =
         [ "git://gitlab.com/" "https://gitlab.com/" ];
-
+      url."ssh://nsgit@git.netsurf-browser.org/".pushInsteadOf =
+        [ "git://git.netsurf-browser.org/" "https://git.netsurf-browser.org/" ];
       alias = { st = "status"; };
     };
   };
