@@ -45,8 +45,8 @@ let
       {
         publisher = "rust-lang";
         name = "rust-analyzer";
-        version = "0.4.1284";
-        sha256 = "sha256-rYZu2it/NY38JnR1ufsZGCRLXnrlRftLo2K/QnP/2Dg=";
+        version = "0.4.1332";
+        sha256 = "sha256-kutMZfbIdoR1gBc/NOgd3jfJpIZ9iaBbAD3zNjGlP6E=";
       }
       {
         publisher = "ms-vscode-remote";
@@ -54,24 +54,24 @@ let
         version = "0.242.0";
         sha256 = "sha256-cLHa0E0izNu2QYQBQ0qUlCIXsJmvc7Q6kgR6F3hnMX8=";
       }
-      {
-        publisher = "dendron";
-        name = "dendron";
-        version = "0.115.1";
-        sha256 = "sha256-4fQRb2ubSrUtVFD2mVdrP/1dWTdYJ6anmXDKtCKglOc=";
-      }
-      {
-        publisher = "dendron";
-        name = "dendron-paste-image";
-        version = "1.1.1";
-        sha256 = "sha256-SlW8MEWBgf8cJsdSzeegqPiAlEvlnrxuvrJJdhHwq2E=";
-      }
-      {
-        publisher = "dendron";
-        name = "dendron-markdown-shortcuts";
-        version = "0.12.1";
-        sha256 = "sha256-Kmjm1xQvrt228XNSRkLUu6Yu3Oec4csJhi74zjsh3HY=";
-      }
+      # {
+      #   publisher = "dendron";
+      #   name = "dendron";
+      #   version = "0.115.1";
+      #   sha256 = "sha256-4fQRb2ubSrUtVFD2mVdrP/1dWTdYJ6anmXDKtCKglOc=";
+      # }
+      # {
+      #   publisher = "dendron";
+      #   name = "dendron-paste-image";
+      #   version = "1.1.1";
+      #   sha256 = "sha256-SlW8MEWBgf8cJsdSzeegqPiAlEvlnrxuvrJJdhHwq2E=";
+      # }
+      # {
+      #   publisher = "dendron";
+      #   name = "dendron-markdown-shortcuts";
+      #   version = "0.12.1";
+      #   sha256 = "sha256-Kmjm1xQvrt228XNSRkLUu6Yu3Oec4csJhi74zjsh3HY=";
+      # }
       {
         publisher = "redhat";
         name = "vscode-yaml";
