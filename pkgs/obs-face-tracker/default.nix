@@ -3,13 +3,13 @@
 
 stdenv.mkDerivation rec {
   pname = "obs-face-tracker";
-  version = "486ade5981e9fed8bbeb8b5d8dfd011d9b539a88";
+  version = "0.7.0";
 
   src = fetchFromGitHub {
     owner = "norihiro";
     repo = "obs-face-tracker";
     rev = "${version}";
-    sha256 = "sha256-liz8KQG7xeo8AlU/5CwO/l6uN6XlWBHIocQd623Xo6U=";
+    sha256 = "sha256-DUfYENJ5Eo0tgsFfyFCjIS1Q5i74QXtNVkuPg0hka14=";
     fetchSubmodules = true;
   };
 

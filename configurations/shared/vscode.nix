@@ -4,7 +4,7 @@ let
   r-a-package = pkgs.unstable.rust-analyzer-unwrapped;
   rustup-package = pkgs.unstable.rustup;
   # Maybe change this later?
-  base = pkgs.unstable;
+  base = pkgs;
   orig-ext = pkgs.vscode-extensions;
   package = base.vscode-with-extensions.override {
     vscodeExtensions = (with base.vscode-extensions; [
