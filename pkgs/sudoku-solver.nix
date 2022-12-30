@@ -2,12 +2,8 @@
 
 stdenv.mkDerivation rec {
   name = "sudoku-solver";
-  version = "0.3.2-alpha";
-  src = fetchurl {
-    url =
-      "https://github.com/dclamage/SudokuSolver/releases/download/v${version}/SudokuSolver-${version}-linux-x64.tar.gz";
-    sha256 = "sha256-NE5m6BPARsmSGwpLpChVSm9VoDuYPJeQWOEH82mGqd4=";
-  };
+  version = "0.4.0-alpha";
+  src = ./SudokuSolver-0.4.0-alpha-linux-x64.tar.gz;
 
   # Rangsk's tarball lacks a subdir
   setSourceRoot = "sourceRoot=`pwd`";
@@ -28,6 +24,11 @@ stdenv.mkDerivation rec {
     mkdir -p $out/dist
     cp -a . $out/dist/
     mkdir -p $out/bin
+    echo here
+    find .
+    echo there
+    find $out
+    echo done
     makeWrapper $out/dist/SudokuSolverConsole $out/bin/sudoku-solver --argv0 SudokuSolverConsole --prefix LD_LIBRARY_PATH : ${pkgs.openssl.out}/lib:${pkgs.icu.out}/lib
   '';
 
