@@ -113,6 +113,7 @@ in {
       "editor.fontLigatures" = true;
       "editor.formatOnSave" = true;
       "nix.enableLanguageServer" = true;
+      "nix.serverPath" = "${pkgs.nil}/bin/nil";
       "workbench.editorAssociations" = { "*.ipynb" = "jupyter-notebook"; };
       "redhat.telemetry.enabled" = false;
     };
@@ -123,5 +124,5 @@ in {
     }];
   };
   home.packages = with pkgs;
-    [ rustup-package nixfmt nodePackages.prettier ] ++ [ r-a-package ];
+    [ rustup-package nixfmt nodePackages.prettier nil ] ++ [ r-a-package ];
 }
