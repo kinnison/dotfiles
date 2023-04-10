@@ -33,8 +33,8 @@ let
       {
         publisher = "serayuzgur";
         name = "crates";
-        version = "0.5.10";
-        sha256 = "sha256-bY/dphiEPPgTg1zMjvxx4b0Ska2XggRucnZxtbppcLU=";
+        version = "0.5.11";
+        sha256 = "sha256-CuUc68SRJWbnChLJjHqZwPbzptxG85qHJ53IrAZc2zc=";
       }
       {
         publisher = "karunamurti";
@@ -45,14 +45,14 @@ let
       {
         publisher = "rust-lang";
         name = "rust-analyzer";
-        version = "0.4.1432";
-        sha256 = "sha256-+XKTpVVCuou+WwWMh3sdeptv6YsVr+Ni7dnF6x9Jdxo=";
+        version = "0.4.1470";
+        sha256 = "sha256-qQ9aRe/4u97MabvtuekBrXvNitU+SQ55PoN9vjGG3EA=";
       }
       {
         publisher = "ms-vscode-remote";
         name = "remote-containers";
-        version = "0.242.0";
-        sha256 = "sha256-cLHa0E0izNu2QYQBQ0qUlCIXsJmvc7Q6kgR6F3hnMX8=";
+        version = "0.289.0";
+        sha256 = "sha256-U7gilVJx8c+nmh6YVGVLoRKjC2n71Vih6aALWkcQw0I=";
       }
       # {
       #   publisher = "dendron";
@@ -75,8 +75,8 @@ let
       {
         publisher = "redhat";
         name = "vscode-yaml";
-        version = "1.11.10112022";
-        sha256 = "sha256-/ZD3LOf6d5dJJW7eGZgkrf4hj1CXZJNI0u06Bnmyo0Q=";
+        version = "1.12.2";
+        sha256 = "sha256-EjHQvWiEEfLxM+c/SWAJ2H9ltGEgzMSC84Zyl5u+eqQ=";
       }
       # {
       #   publisher = "vadimcn";
