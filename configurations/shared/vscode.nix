@@ -45,8 +45,8 @@ let
       {
         publisher = "rust-lang";
         name = "rust-analyzer";
-        version = "0.4.1496";
-        sha256 = "sha256-bgR6GwgteGaCXFRrGPREvx+n6vUNawf6Iwtmd09F3RQ=";
+        version = "0.4.1501";
+        sha256 = "sha256-tl5Ec+9oPSKi2HvqL5xCl84LjfCpbSJ/ZlD9Rj9KaTA=";
       }
       {
         publisher = "ms-vscode-remote";
