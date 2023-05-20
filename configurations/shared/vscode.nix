@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
   #r-a-package = pkgs.local.rust-analyzer-unwrapped;
-  r-a-package = pkgs.unstable.rust-analyzer-unwrapped;
+  #r-a-package = pkgs.unstable.rust-analyzer-unwrapped;
   rustup-package = pkgs.unstable.rustup;
   # Maybe change this later?
   base = pkgs;
@@ -45,8 +45,8 @@ let
       {
         publisher = "rust-lang";
         name = "rust-analyzer";
-        version = "0.4.1496";
-        sha256 = "sha256-bgR6GwgteGaCXFRrGPREvx+n6vUNawf6Iwtmd09F3RQ=";
+        version = "0.4.1521";
+        sha256 = "sha256-Z7TmEm9/oCHPqFct9spsea3TlZ8jEOgLuhLnKCLoGag=";
       }
       {
         publisher = "ms-vscode-remote";
@@ -93,7 +93,7 @@ in {
     package = my-vscode-package;
     userSettings = {
       "update.mode" = "none";
-      "rust-analyzer.server.path" = "${r-a-package}/bin/rust-analyzer";
+      "rust-analyzer.server.path" = "${rustup-package}/bin/rust-analyzer";
       "rust-analyzer.checkOnSave.command" = "clippy";
       "rust-analyzer.hover.actions.references.enable" = true;
       "rust-analyzer.inlayHints.closureReturnTypeHints.enable" = "with_block";
@@ -124,5 +124,5 @@ in {
     }];
   };
   home.packages = with pkgs;
-    [ rustup-package nixfmt nodePackages.prettier nil ] ++ [ r-a-package ];
+    [ rustup-package nixfmt nodePackages.prettier nil ]; # ++ [ r-a-package ];
 }
