@@ -116,6 +116,7 @@ in {
       "nix.serverPath" = "${pkgs.nil}/bin/nil";
       "workbench.editorAssociations" = { "*.ipynb" = "jupyter-notebook"; };
       "redhat.telemetry.enabled" = false;
+      "[nix]" = { "editor.defaultFormatter" = "brettm12345.nixfmt-vscode"; };
     };
     keybindings = [{
       key = "Enter";
