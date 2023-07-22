@@ -68,6 +68,7 @@
             ./configurations/mail/personal.nix
             ./configurations/sudoku.nix
             ./configurations/streaming.nix
+            ./configurations/development.nix
           ];
         };
         cataplexy = make-home {
