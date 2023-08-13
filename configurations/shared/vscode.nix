@@ -45,8 +45,8 @@ let
       {
         publisher = "rust-lang";
         name = "rust-analyzer";
-        version = "0.4.1521";
-        sha256 = "sha256-341IKYNKr0kirWrE2c8Uzvo041kYrYuOv5UlZqM4JzQ=";
+        version = "0.4.1620";
+        sha256 = "sha256-RIQVx6y2tS23PgI7015CnGUYm/RUNSKDtluzZ+XDpiY=";
       }
       {
         publisher = "ms-vscode-remote";
@@ -124,6 +124,10 @@ in {
       when = "editorTextFocus && !suggestWidgetVisible && editorLangId == rust";
     }];
   };
-  home.packages = with pkgs;
-    [ rustup-package nixfmt nodePackages.prettier nil ]; # ++ [ r-a-package ];
+  home.packages = with pkgs; [
+    rustup-package
+    nixfmt
+    nodePackages.prettier
+    nil
+  ]; # ++ [ r-a-package ];
 }
