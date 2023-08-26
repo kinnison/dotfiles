@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
   #r-a-package = pkgs.local.rust-analyzer-unwrapped;
-  r-a-package = pkgs.unstable.rust-analyzer-unwrapped;
+  #r-a-package = pkgs.unstable.rust-analyzer-unwrapped;
   rustup-package = pkgs.unstable.rustup;
   # Maybe change this later?
   base = pkgs;
@@ -45,8 +45,8 @@ let
       {
         publisher = "rust-lang";
         name = "rust-analyzer";
-        version = "0.4.1501";
-        sha256 = "sha256-tl5Ec+9oPSKi2HvqL5xCl84LjfCpbSJ/ZlD9Rj9KaTA=";
+        version = "0.4.1620";
+        sha256 = "sha256-RIQVx6y2tS23PgI7015CnGUYm/RUNSKDtluzZ+XDpiY=";
       }
       {
         publisher = "ms-vscode-remote";
@@ -93,7 +93,7 @@ in {
     package = my-vscode-package;
     userSettings = {
       "update.mode" = "none";
-      "rust-analyzer.server.path" = "${r-a-package}/bin/rust-analyzer";
+      "rust-analyzer.server.path" = "${rustup-package}/bin/rust-analyzer";
       "rust-analyzer.checkOnSave.command" = "clippy";
       "rust-analyzer.hover.actions.references.enable" = true;
       "rust-analyzer.inlayHints.closureReturnTypeHints.enable" = "with_block";
@@ -116,6 +116,7 @@ in {
       "nix.serverPath" = "${pkgs.nil}/bin/nil";
       "workbench.editorAssociations" = { "*.ipynb" = "jupyter-notebook"; };
       "redhat.telemetry.enabled" = false;
+      "[nix]" = { "editor.defaultFormatter" = "brettm12345.nixfmt-vscode"; };
     };
     keybindings = [{
       key = "Enter";
@@ -123,6 +124,10 @@ in {
       when = "editorTextFocus && !suggestWidgetVisible && editorLangId == rust";
     }];
   };
-  home.packages = with pkgs;
-    [ rustup-package nixfmt nodePackages.prettier nil ] ++ [ r-a-package ];
+  home.packages = with pkgs; [
+    rustup-package
+    nixfmt
+    nodePackages.prettier
+    nil
+  ]; # ++ [ r-a-package ];
 }

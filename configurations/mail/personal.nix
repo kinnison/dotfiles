@@ -8,7 +8,7 @@
     text = ''
       #!${pkgs.bash}/bin/bash
 
-      ${pkgs.pass}/bin/pass personal/mail.pepperfish.net/dsilvers@digital-scurf.org | ${pkgs.coreutils}/bin/head -1 | ${pkgs.coreutils}/bin/tr -d '\n'
+      ${pkgs.pass}/bin/pass personal/mail.infrafish.uk/dsilvers@digital-scurf.org | ${pkgs.coreutils}/bin/head -1 | ${pkgs.coreutils}/bin/tr -d '\n'
     '';
   };
   accounts.email.accounts = {
@@ -20,11 +20,11 @@
       passwordCommand =
         "${homeDirectory}/.config/neomutt/.personal-email-password";
       imap = {
-        host = "mail.pepperfish.net";
+        host = "mail.infrafish.uk";
         port = 993;
       };
       smtp = {
-        host = "mail.pepperfish.net";
+        host = "mail.infrafish.uk";
         port = 587;
         tls = {
           enable = true;

@@ -2,9 +2,9 @@
   description = "Daniel's dot files, and other home-manager based config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager/release-22.11";
+    home-manager.url = "github:nix-community/home-manager/release-23.05";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -68,6 +68,7 @@
             ./configurations/mail/personal.nix
             ./configurations/sudoku.nix
             ./configurations/streaming.nix
+            ./configurations/development.nix
           ];
         };
         cataplexy = make-home {

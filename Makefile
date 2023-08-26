@@ -11,3 +11,6 @@ rebuild-switch:
 
 rebuild-build:
 	sudo env NIX_CURL_FLAGS="--user-agent Mozilla/5.0" nixos-rebuild --override-input dotfiles $$(pwd) -v build -L --keep-going
+
+rebuild-boot:
+	sudo env NIX_CURL_FLAGS="--user-agent Mozilla/5.0" nixos-rebuild --override-input dotfiles $$(pwd) -v boot -L --keep-going
