@@ -79,6 +79,21 @@
             ./configurations/sudoku.nix
           ];
         };
+        dsilvers = let
+          system = "x86_64-linux";
+          pkgs = nixpkgs.legacyPackages.${system};
+        in inputs.home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [
+            ({...}: {
+              _module.args.username = "dsilvers";
+              _module.args.homeDirectory = "/home/dsilvers";
+              _module.args.skipSudo = true;
+            })
+            ./configurations
+            ./configurations/shared/server.nix
+          ];
+        };
       };
     }
     # Set up a "dev shell" that will work on all architectures
