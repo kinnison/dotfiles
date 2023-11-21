@@ -1,4 +1,4 @@
-{ config, dotroot, homeDirectory, ... }:
+{ config, dotroot, homeDirectory, canGPG ? true, ... }:
 let
   # You can remove this dodgy set after 21.05 (see below) and replace it with
   # gpgcfg = config.programs.gpg;
@@ -16,7 +16,7 @@ in {
     userEmail = "dsilvers@digital-scurf.org";
     signing = {
       key = "0x3CCEBABE206C3B69";
-      signByDefault = true;
+      signByDefault = canGPG;
     };
     ignores = [ "target" "result" ".direnv/" ];
     extraConfig = {

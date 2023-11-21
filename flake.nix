@@ -89,6 +89,7 @@
               _module.args.username = "dsilvers";
               _module.args.homeDirectory = "/home/dsilvers";
               _module.args.skipSudo = true;
+              _module.args.canGPG = false;
             })
             ./configurations
             ./configurations/shared/server.nix
