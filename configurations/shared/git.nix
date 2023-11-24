@@ -1,4 +1,4 @@
-{ config, dotroot, homeDirectory, canGPG ? true, ... }:
+{ config, dotroot, homeDirectory, canGPG, ... }:
 let
   # You can remove this dodgy set after 21.05 (see below) and replace it with
   # gpgcfg = config.programs.gpg;
