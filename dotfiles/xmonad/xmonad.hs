@@ -227,6 +227,7 @@ main = do
               } `EZ.additionalKeysP`
               [ -- General keys
                 ("M-x", spawn "mate-terminal")
+              , ("M-e", spawn "rofi -modi emoji -show emoji -kb-custom-1 Ctrl+c")
               , ("M-M1-C-m", launchOrRaiseEmail)
               , ("M-M1-C-d", safeSpawn "mate-display-properties" [])
               , ("M1-<F2>", shellPrompt myPromptConfig)
