@@ -45,8 +45,8 @@ let
       {
         publisher = "rust-lang";
         name = "rust-analyzer";
-        version = "0.4.1792";
-        sha256 = "sha256-6gUvrR1JNNQ2hqArp8ZpFSrYTekYnJn3cWKF5P5AfCU=";
+        version = "0.4.1909";
+        sha256 = "sha256-MHemPMdrkK5XxpnwEQYWIoqcf/x9n3sfD9xLzFDEstc=";
       }
       {
         publisher = "ms-vscode-remote";
@@ -94,7 +94,7 @@ in {
     userSettings = {
       "update.mode" = "none";
       "rust-analyzer.server.path" = "${rustup-package}/bin/rust-analyzer";
-      "rust-analyzer.checkOnSave.command" = "clippy";
+      "rust-analyzer.check.command" = "clippy";
       "rust-analyzer.hover.actions.references.enable" = true;
       "rust-analyzer.inlayHints.closureReturnTypeHints.enable" = "with_block";
       "rust-analyzer.inlayHints.lifetimeElisionHints.enable" = "skip_trivial";
