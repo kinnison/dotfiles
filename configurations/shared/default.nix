@@ -25,4 +25,5 @@
     # We like to do hardware design, include kicad
     #kicad
   ];
+  services.keybase.enable = true;
 }
