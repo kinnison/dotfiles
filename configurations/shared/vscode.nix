@@ -117,6 +117,7 @@ in {
       "workbench.editorAssociations" = { "*.ipynb" = "jupyter-notebook"; };
       "redhat.telemetry.enabled" = false;
       "[nix]" = { "editor.defaultFormatter" = "brettm12345.nixfmt-vscode"; };
+      "window.zoomLevel" = 2;
     };
     keybindings = [{
       key = "Enter";
