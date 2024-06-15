@@ -127,7 +127,7 @@ in {
   };
   home.packages = with pkgs; [
     rustup-package
-    nixfmt
+    nixfmt-classic
     nodePackages.prettier
     nil
   ]; # ++ [ r-a-package ];

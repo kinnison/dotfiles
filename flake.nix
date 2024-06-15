@@ -103,6 +103,6 @@
       let pkgs = import nixpkgs { inherit overlays system; };
       in {
         packages = import ./pkgs { inherit pkgs; };
-        devShell = pkgs.mkShell { buildInputs = with pkgs; [ nixfmt ]; };
+        devShell = pkgs.mkShell { buildInputs = with pkgs; [ nixfmt-classic ]; };
       }));
 }

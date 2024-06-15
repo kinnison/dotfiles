@@ -25,6 +25,7 @@ in {
   services.gpg-agent = {
     enable = true;
     enableSshSupport = true;
+    pinentryPackage = pkgs.pinentry-gtk2;
   };
 
   systemd.user.sockets.gpg-agent-ssh.Socket.ExecStartPost =
