@@ -84,6 +84,12 @@ let
       #   version = "1.7.0";
       #   sha256 = "sha256-DuYweIri8NpBHcIG37WyUUc+p4/TaBBHcI6x6YIRvmk=";
       # }
+      #{
+      #  publisher = "gavinleroy";
+      #  name = "argus";
+      #  version = "0.1.13";
+      #  sha256 = "sha256-MmGSNMfCtbQzR31Ji9kXHxe8ZUV97zZ0zbyJAcjOxuc=";
+      #}
     ];
   };
   my-vscode-package = package // { pname = base.vscode.pname; };
