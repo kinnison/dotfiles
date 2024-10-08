@@ -21,7 +21,7 @@
     # But they were arses, so polymc
     #polymc
     # But they were bigger arses, so prismlauncher
-    #prismlauncher
+    prismlauncher
     # We like to do hardware design, include kicad
     #kicad
   ];
